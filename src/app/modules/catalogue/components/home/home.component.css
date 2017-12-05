@@ -1,0 +1,15 @@
+.bloc_categorie {
+	background:#00f000;
+	padding: 0;
+    margin: 10px 10px;
+    height: 200px;
+	text-align:center;
+	}
+	span.libelle{
+	margin-top: 150px;
+    float: left;
+    width: 100%;
+    height: 25%;
+	background:#fff;
+	opacity:0.9;
+	}

@@ -6,6 +6,7 @@ import { FerroviaireComponent } from './components/ferroviaire/ferroviaire.compo
 import { BureautiqueComponent } from './components/bureautique/bureautique.component';
 import { SupportComponent } from './components/support/support.component';
 import { EquipementComponent } from './components/equipement/equipement.component';
+import { TelephonieComponent } from './components/telephonie/telephonie.component';
 
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
 {path:'ferroviaire', component: FerroviaireComponent},
 {path:'support' ,component: SupportComponent},
 {path:'bureautique', component: BureautiqueComponent},
-{path:'equipement', component: EquipementComponent}
+{path:'equipement', component: EquipementComponent},
+{path:'telephonie', component: TelephonieComponent}
 
 ];
 

@@ -18,7 +18,7 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css","../node_modules/bootstrap-3-grid/bootstrap-3-grid.css"
       ],
       "scripts": [],
       "environments": {

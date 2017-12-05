@@ -1,23 +1,35 @@
-<div class="row">
-	<div class="col-md-12 col-xs-12">
-		<a routerLink="" routerLinkActive="active">Logo</a>
+<div class="header">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<a routerLink="" routerLinkActive="active">Logo</a>
+		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="col-md-12 col-xs-12">
-		<ul>
-			<li>
-				<a routerLink="ferroviaire" routerLinkActive="active">Ferroviaire</a>
-			</li>
-			<li>
-				<a routerLink="support" routerLinkActive="active">Fonctions Support</a>
-			</li>
-			<li>
-				<a routerLink="bureautique" routerLinkActive="active">Services Bureautiques</a>
-			</li>
-			<li>
-				<a routerLink="equipement" routerLinkActive="active">Services Equipement</a>
-			</li>
-		</ul>
+	<ul class="row">
+		<li class="col-md-4 col-xs-4">
+			<a routerLink="catSI" routerLinkActive="active">CATALOGUE DE SERVICES SI</a>
+		</li>
+		<li class="col-md-3 col-xs-8">
+			<input type="text" placeholder="Recherche"/>
+		</li>
+		<li>
+		<ul class="col-md-4 col-xs-12 head-right">
+				<li>
+					<a routerLink="account" routerLinkActive="active">Mon compte</a>
+				</li>
+				<li>
+					<a routerLink="panier" routerLinkActive="active">Mon panier</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<ul class="nav">
+				<li><a routerLink="perso" routerLinkActive="active"><br/>MON CATALOGUE</a></li>
+				<li><a routerLink="catalogue" routerLinkActive="active"><br/>TOUS LES SERVICES</a></li>
+				<li><a routerLink="demandes" routerLinkActive="active"><br/>MES DEMANDES</a></li>
+			</ul>
+		</div>
 	</div>
 </div>

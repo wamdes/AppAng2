@@ -5,12 +5,18 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { FavorisComponent } from './components/favoris/favoris.component';
+import { PersoComponent } from './components/perso/perso.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
+    FavorisComponent,
+    PersoComponent,
+    SidebarComponent,
     
   ],
   imports: [

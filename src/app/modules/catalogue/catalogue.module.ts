@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { CatalogueRoutingModule } from './catalogue-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { FerroviaireComponent } from './components/ferroviaire/ferroviaire.component';
@@ -19,5 +20,6 @@ import { DemandesComponent } from '../demandes/demandes.component';
     CatalogueRoutingModule
   ],
   declarations: [HomeComponent, FerroviaireComponent, BureautiqueComponent, SupportComponent, CatalogueComponent, Bloctheme1Component, EquipementComponent, TelephonieComponent, DemandesComponent]
+
 })
 export class CatalogueModule { }

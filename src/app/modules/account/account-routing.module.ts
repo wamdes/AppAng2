@@ -1,15 +1,21 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AccountComponent } from './account.component';
-const routes: Routes = [
-{path:'',
-component:AccountComponent
-}
-];
+import { AccountComponent } from './components/account.component';
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-  providers: []
-})
-export class AccountRoutingModule { }
+
+
+/**
+ * routes modules
+ * @type Routes
+ */
+const accountRoutesParams: Routes = [
+  {
+    path: '',
+    component: AccountComponent
+  }
+];
+/**
+ * Injection
+ * @type {ModuleWithProviders}
+ */
+export const ROUTES_ACCOUNT: ModuleWithProviders = RouterModule.forChild(accountRoutesParams);

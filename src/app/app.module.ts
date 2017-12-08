@@ -24,6 +24,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
  */
 import {SharedModule} from './modules/shared/shared.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FavorisComponent,
     PersoComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

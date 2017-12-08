@@ -10,7 +10,7 @@ import { ROUTES } from './app.routes';
  * components
  */
 import { AppRootComponent } from './components/root/app-root.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FavorisComponent } from './components/favoris/favoris.component';
 import { PersoComponent } from './components/perso/perso.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -23,14 +23,16 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
  * providers
  */
 import {SharedModule} from './modules/shared/shared.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppRootComponent,
-    NavigationComponent,
+    HeaderComponent,
     FavorisComponent,
     PersoComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

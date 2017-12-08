@@ -1,0 +1,121 @@
+/*
+
+    == Configuration variables
+    == This file contains variables that are used in page layout and default sizes, Media Queries (MQ) definitions, etc + grid (grillade)
+    == Source: copy/pasted from KNACSS v4.4.5 (@author: Raphael Goetter, Alsacreations - licence WTFPL http://www.wtfpl.net ) with modifications
+    ==         and https://github.com/alsacreations/KNACSS/blob/master/sass/_config/_breakpoints.scss for grid/grillade variables
+
+
+ * @contributors: SC5, Raphaël Goetter (Alsacréations), Jennifer Noesser (Alsacréations), Philippe Vayssière (Alsacréations)
+ * @date-created: 2016-05-09
+ * @last-update: 2016-11-22
+
+*/
+
+
+
+// Config file and project variables
+
+// font sizes
+$base-font-size : 1.6rem !default; // ex. 1.6rem would be "16px" equivalent
+$line-height    : 1.5 !default; // equiv line-height 1.5
+$h1-size        : 4.4rem !default; // equiv "44px"
+$h2-size        : 3.2rem !default; // equiv "32px"
+$h3-size        : 1.8rem !default; // equiv "18px"
+$h4-size        : 1.7rem !default; // equiv "17px"
+$h5-size        : 1.6rem !default; // equiv "16px"
+$h6-size        : 1.5rem !default; // equiv "15px"
+
+// font loaded
+$font-avenir        : "Avenir";
+$font-avenir-next   : "Avenir Next";
+$font-proxima       : "Proxima";
+
+// font stacks
+$font-stack-common    : $font-avenir, Arial, sans-serif !default; // common font
+$font-stack-headings  : "Avenir", Arial, sans-serif !default; // headings font
+$font-stack-monospace : consolas, courier, monospace !default; // monospace font
+$path-font : '/assets/fonts/'  !default;
+
+// SNCF bright colors
+$color-purple           : #6E1E78;
+$color-plum             : #A1006B;
+$color-raspberry        : #CD0037;
+$color-orange           : #E05206;
+$color-yellow           : #FFB612;
+$color-limegreen        : #D2E100;
+$color-applegreen       : #82BE00;
+$color-teal             : #009AA6;
+$color-blue             : #0088CE;
+$color-carbon           : #3E3D40;
+
+// SNCF grey colors
+$color-galactic-bar      : #1C1C1C;
+$color-warmgray-11       : #675C53;
+$color-warmgray-9        : #82786F;
+$color-warmgray-7        : #988F86;
+$color-warmgray-5        : #AFA59B;
+$color-warmgray-3        : #C3BEB4;
+$color-warmgray-1        : #E0DED8;
+$color-coolgray-11       : #4D4F53;
+$color-coolgray-9        : #747678;
+$color-coolgray-7        : #A0A0A0;
+$color-coolgray-5        : #B9B9B9;
+$color-coolgray-3        : #D7D7D7;
+$color-coolgray-1        : #E1E1E1;
+$color-coolgray-1-a11y   : #FBFBFB;
+
+$border-color            : darken($color-coolgray-3, 2.5%); // #D1D1D1
+
+// font colors
+$base-color             : $color-carbon !default; // text color on body and content
+$primary-color          : $base-color !default; // text color on primary elements
+$secondary-color        : $base-color !default; // text color on secondary elements
+$headings-color         : $color-coolgray-11 !default; // text color on headings
+$headings-1-color       : $base-color !default; // text color on headings level 1
+$headings-2-color       : $base-color !default; // text color on headings level 2
+$headings-3-color       : $base-color !default; // text color on headings level 3
+$base-color-link        : #333 !default; // base links color
+
+// backgrounds
+$base-background        : #fff !default; // body background color
+$primary-background     : $base-background !default; // primary elements background color
+$secondary-background   : $base-background !default; // secondary elements background color
+
+// spacings (choose unit you prefer)
+$tiny-value             : 0.5rem !default; // tiny value for margins / paddings
+$tiny-plus-value        : 0.7rem !default; // tiny+ value for margins / paddings
+$small-value            : 1rem !default; // small value for margins / paddings
+$small-plus-value       : 1.5rem !default; // small+ value for margins / paddings
+$medium-value           : 2rem !default; // medium value for margins / paddings
+$medium-plus-value      : 3rem !default; // medium+ value for margins / paddings
+$large-value            : 4rem !default; // large value for margins / paddings
+$large-plus-value       : 6rem !default; // large value for margins / paddings
+$extra-large-value      : 8rem !default; // extra large value for margins / paddings
+$extra-large-plus-value : 12rem !default; // extra large value for margins / paddings
+$ultra-large-value      : 16rem !default; // ultra large value for margins / paddings
+$ultra-large-plus-value : 20rem !default; // ultra large value for margins / paddings
+
+// breakpoints (choose unit you prefer)
+$tiny-screen            : 320px !default; // tiny screens media query (less-equal than 320px)
+$tiny-plus-screen       : 480px !default; // screens between 321px and 480px
+$small-screen           : 640px !default; // screens between 481px and 640px
+$small-plus-screen      : 768px !default; // screens between 641px and 768px
+$medium-screen          : 980px !default; // screens between 769px and 960px
+$medium-plus-screen     : 1024px !default; // screens between 961px and 1024px
+$large-screen           : 1280px !default; // screens between 1025px and 1280px
+$large-plus-screen      : 1440px !default; // screens between 1281px and 1440px
+$extra-large-screen     : 1600px !default; // screens between 1441px and 1600px
+$ultra-large-screen     : 1920px !default; // ultra large screens
+
+
+// Grillade variables
+// Responsive breakpoints variables
+
+// Warning : you should use your own values, regardless of the devices
+// Best practise : (max-width: $BP) and (min-width: ($BP + 1))
+$tiny: 544px !default; // or 'em' if you prefer, of course
+$small: 768px !default;
+// Not used by grillade $medium: 1024px !default;
+$large: 1200px !default;
+// Not used by grillade $extra-large: 1440px !default;

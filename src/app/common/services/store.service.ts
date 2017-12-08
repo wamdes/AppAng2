@@ -15,16 +15,27 @@ export class StoreService {
     return this._stores.find(item => item.id === id);
   }
   public delete(id) {
-    this._stores = this._stores.filter( item => !(item.id === id) );
+    this.stores = this._stores.filter( item => !(item.id === id) );
     return this.stores;
   }
   set store(value) {
     this._stores.push(value);
+    this.stores = this._stores;
   }
   set stores(value) {
     this._stores = value;
   }
   get stores() {
     return this._stores;
+  }
+  drag(event, item) {
+    event.dataTransfer.setData('item', item);
+  }
+  drop(event) {
+    event.preventDefault();
+    this.store = event.dataTransfer.getData('item');
+  }
+  allowDrop(event) {
+    event.preventDefault();
   }
 }

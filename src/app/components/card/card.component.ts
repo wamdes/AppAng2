@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
     this._model = value;
   };
 
-  constructor(private stores: StoreService) { }
+  constructor(public stores: StoreService) { }
   pushStore(value) {
     this.stores.store = value;
     return this.stores.find(value.id);

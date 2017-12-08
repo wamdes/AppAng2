@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 /**
  * Common services dependencies
  */
+import { StoreService } from '../../common/services/store.service';
 
 
 /**
@@ -25,7 +26,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: []
+      providers: [StoreService]
     };
   }
 }

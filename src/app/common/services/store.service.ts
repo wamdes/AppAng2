@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class StoreService {
 
-  private _stores;
+  private _stores = [];
 
   constructor() { }
 
@@ -11,10 +11,19 @@ export class StoreService {
     return this.stores.length;
   }
 
+  public find(id) {
+    return this._stores.find(item => item.id === id);
+  }
+  public delete(id) {
+    this._stores = this._stores.filter( item => !(item.id === id) );
+    return this.stores;
+  }
+  set store(value) {
+    this._stores.push(value);
+  }
   set stores(value) {
     this._stores = value;
   }
-
   get stores() {
     return this._stores;
   }

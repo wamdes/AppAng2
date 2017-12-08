@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {StoreService} from "../../common/services/store.service";
 
 @Component({
   selector: 'app-card',
@@ -10,8 +11,10 @@ export class CardComponent implements OnInit {
     title: 'test',
     description: 'test',
     image: 'test.png',
+    show: false,
     items: [
       {
+        id: 1,
         title: 'test',
         description: 'test',
         image: 'test.png'
@@ -22,8 +25,11 @@ export class CardComponent implements OnInit {
     this._model = value;
   };
 
-  constructor() { }
-
+  constructor(private stores: StoreService) { }
+  pushStore(value) {
+    this.stores.store = value;
+    return this.stores.find(value.id);
+  }
   ngOnInit() {
   }
   get model(){

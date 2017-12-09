@@ -19,6 +19,7 @@ import { EquipementComponent } from './components/equipement/equipement.componen
 import { TelephonieComponent } from './components/telephonie/telephonie.component';
 import { Bloctheme2Component } from './commons/bloctheme2/bloctheme2.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -34,6 +35,7 @@ import { Bloctheme2Component } from './commons/bloctheme2/bloctheme2.component';
     Bloctheme2Component,
     EquipementComponent,
     TelephonieComponent
+	
   ]
 
 })

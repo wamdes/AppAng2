@@ -38,14 +38,22 @@
       width: 90%;
       line-height: 1;
     }
+	
     &:after{
-      content: '>';
+      content:url(/assets/img/arrow.png);
       width: 8%;
+	  height:10%;
       display: inline-block;
       vertical-align: middle;
+	  font-weight:bold;
+	  
     }
+	
   }
-
+	.active:after{
+	  color: #000;
+	  transform: rotate(-90deg);
+	}
   .back {
     background: transparent;
     a {
@@ -58,10 +66,11 @@
         margin: 0;
       }
       &:before{
-        content: '<';
+        content:url(/assets/img/arrow.png);;
         width: 8%;
         display: inline-block;
         vertical-align: middle;
+		transform: rotate(-180deg);
       }
       &:after{
         content: '';

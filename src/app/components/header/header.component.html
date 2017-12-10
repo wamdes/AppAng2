@@ -1,0 +1,65 @@
+<header xmlns="http://www.w3.org/1999/html">
+
+  <!-- logo -->
+	<figure
+          class="logo"
+          routerLink=""
+          routerLinkActive="active">
+    <img src="/assets/img/logo.png">
+  </figure>
+
+
+	<section class="row mrg-0">
+    <h1 class="col-xs-12 col-sm-4 mrg-pd-0 title"
+        routerLink="catSI"
+        routerLinkActive="active">
+      <span class="icon"></span>
+      CATALOGUE DE SERVICES SI
+    </h1>
+		<section class="col-xs-12 col-sm-8 mrg-pd-0">
+      <div class="action">
+        <input
+          class="action-search"
+          type="text"
+          placeholder="Recherche"/>
+        <ul class="action-menu">
+            <li>
+              <a routerLink="account" routerLinkActive="active">Mes préférés</a>
+            </li>
+            <li>
+              <a routerLink="account" routerLinkActive="active">Mon compte</a>
+            </li>
+            <li (drop)="stores.drop($event)"
+                (dragover)="stores.allowDrop($event)">
+              <a routerLink="panier"
+                 routerLinkActive="active">
+                Mon panier
+                <span  class="nd-store"
+                       [innerHTML]="stores.nbStore()"
+                ></span>
+              </a>
+            </li>
+         </ul>
+       </div>
+    </section>
+	</section>
+
+
+  <nav class="tab">
+			<ul>
+				<li *ngFor="let tab of tabList">
+          <a [routerLink]="tab.link"
+             routerLinkActive="active"
+             [style.color]="tab.color">
+            {{ tab.name }}
+            <div>
+              <hr [style.background]="tab.color"
+                  [style.border]="tab.color">
+
+            </div>
+
+          </a>
+        </li>
+			</ul>
+	</nav>
+</header>

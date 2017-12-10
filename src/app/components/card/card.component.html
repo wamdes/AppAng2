@@ -1,0 +1,31 @@
+<figure class="col-sm-2 col-xs-6 bloc_categorie"
+        [style.backgroundImage]="model.image"
+        (click)="model.show = !(model.show)">
+  <aside class="libelle">
+    <h3 [innerHTML]="model.title"></h3>
+    <p [innerHTML]="model.description"></p>
+  </aside>
+</figure>
+
+<section *ngIf="model.show">
+  <ul class="row">
+    <li *ngFor="let item of model.items" class="col-sm-2 col-xs-6 bloc_categorie" [style.backgroundImage]="item.image">
+      <div class="close"
+           (click)="model.show = !(model.show)"
+      >
+        <aside class="libelle"
+               draggable="true"
+               (dragstart)="stores.drag($event, item)"
+        >
+          <h3 [innerHTML]="item.title"></h3>
+          <p [innerHTML]="item.description"></p>
+          <button class="add"
+                  (click)="pushStore(item)"
+                  [innerHTML]="'add panier'"
+          ></button>
+        </aside>
+      </div>
+    </li>
+  </ul>
+
+</section>

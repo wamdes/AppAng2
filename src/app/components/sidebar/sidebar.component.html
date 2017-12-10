@@ -1,25 +1,27 @@
-<div class="col-md-2 col-xs-12">
-		<ul class="side_bar">
-		<li>
-			<a routerLink="catalogue/ferroviaire" routerLinkActive="active">Ferroviaire</a>
-		</li>
-		<li>
-			<a routerLink="catalogue/support" routerLinkActive="active">Fonctions Support</a>
-		</li>
-		<li>
-			<a routerLink="catalogue/bureautique" routerLinkActive="active">Bureautique</a>
-		</li>
-		<li>
-			<a routerLink="catalogue/equipement" routerLinkActive="active">Equipement Informatique</a>
-		</li>
-		<li>
-			<a routerLink="catalogue/telephonie" routerLinkActive="active">Téléphonie</a>
-		</li>
-		<li>
-			<a routerLink="catalogue/securite" routerLinkActive="active">Sécurité</a>
-		</li>
-			<li>Demandes de mouvements personnels</li>
-			<li>Demandes de reclamation</li>
-			<li>Demandes hors catalogue</li>
-		</ul>
-	</div>
+<section class="col-sm-4 col-xs-12 sidebar">
+    <div class="back">
+      <a onclick="goTo(back.link)"
+         routerLinkActive="active"
+         class="sidebar-menu">
+        <h3 [innerHTML]="back.title.toUpperCase()"></h3>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li *ngFor="let menu of menuList">
+          <a onclick="goTo(menu.link)"
+             routerLinkActive="active"
+             class="sidebar-menu">
+            <h2 [innerHTML]="menu.title.toUpperCase()"></h2>
+          </a>
+          <p *ngIf="menu.description" [innerHTML]="menu.description"></p>
+        </li>
+      </ul>
+    </nav>
+    <aside>
+      <h2 [innerHTML]="quickView.title"></h2>
+      <p [innerHTML]="quickView.description"></p>
+    </aside>
+</section>
+
+

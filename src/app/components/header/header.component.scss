@@ -1,0 +1,124 @@
+ header {
+
+   padding-left: 35px;
+   background: linear-gradient(to bottom, white 20%, #CB6EAC 21%, #A2006B);
+
+   & > .logo {
+
+     width: 70px;
+     height: 53px;
+     background: white;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     border-top: 0px;
+     border-radius: 0 0 5px 5px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     text-align: center;
+     margin: 0;
+     cursor: pointer;
+     & > img {
+
+       display: inline-block;
+       padding-top: 5px;
+     }
+   }
+
+   .title {
+
+     font-family: Avenir;
+     font-size: 18px;
+     font-weight: 900;
+     text-align: left;
+     color: rgb(255, 255, 255);
+     margin:0;
+     padding-top: 15px !important;
+
+   }
+   .action{
+     white-space: nowrap;
+     text-align: right;
+     padding-right: 35px;
+     &-search{
+
+       display: inline-block;
+       vertical-align: middle;
+       border-radius: 15px;
+       padding: 2px 18px;
+       border: 1px solid rgba(0,0,0, 0.2);
+
+     }
+     &-menu{
+       display: inline-block;
+       vertical-align: middle;
+       white-space: nowrap;
+       &>li{
+         display: inline-block;
+         padding: 2px 18px;
+         white-space: normal;
+         a {
+           text-decoration: none;
+           font-family: Avenir;
+           font-weight: 400;
+           font-size: 12px;
+           text-align: center;
+           color: rgb(255, 255, 255);
+         }
+       }
+     }
+   }
+   .tab {
+    &> ul{
+       display: block;
+       list-style: none;
+       padding: 0;
+       margin: 0;
+
+      &> li {
+         font-family: Avenir;
+         font-weight: 600;
+         font-size: 11px;
+         line-height: 1.64;
+         color: rgb(205, 0, 55);
+         display: inline-block;
+         padding: 0;
+         margin: 0;
+         margin-right: 12px;
+        margin-top: 12px;
+         list-style: none;
+         width: 156px;
+         background: linear-gradient(to bottom, #F6F6F6 , #F8F8F8);
+         border-radius: 6px 6px 0 0;
+         text-align: center;
+         vertical-align: middle;
+         padding-top:16px;
+          a{
+            text-decoration: none;
+            color: inherit;
+            div{
+              height: 7px;
+            }
+            hr{
+              width: 112px;
+              height: 2px;
+              background: #555;
+            }
+            &.active hr{
+              height: 7px;
+            }
+          }
+
+       }
+     }
+  }
+   .nd-store{
+     width: 18px;
+     height: 18px;
+     border-radius: 50%;
+     background: #ff565e;
+     text-align: center;
+     vertical-align: middle;
+     padding: 4px 2px 2px 2px;
+     color: white;
+     display: inline-block;
+   }
+}
+

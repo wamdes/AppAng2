@@ -29,8 +29,15 @@
             <li>
               <a routerLink="account" routerLinkActive="active">Mon compte</a>
             </li>
-            <li ondrop="stores.drop(event)" ondragover="stores.allowDrop(event)">
-              <a routerLink="panier" routerLinkActive="active">Mon panier<span  class="nd-store" [innerHTML]="stores.nbStore()"></span></a>
+            <li (drop)="stores.drop($event)"
+                (dragover)="stores.allowDrop($event)">
+              <a routerLink="panier"
+                 routerLinkActive="active">
+                Mon panier
+                <span  class="nd-store"
+                       [innerHTML]="stores.nbStore()"
+                ></span>
+              </a>
             </li>
          </ul>
        </div>

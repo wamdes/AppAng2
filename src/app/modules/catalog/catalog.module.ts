@@ -18,11 +18,13 @@ import { Bloctheme1Component } from './commons/bloctheme1/bloctheme1.component';
 import { EquipementComponent } from './components/equipement/equipement.component';
 import { TelephonieComponent } from './components/telephonie/telephonie.component';
 import { Bloctheme2Component } from './commons/bloctheme2/bloctheme2.component';
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    ROUTES_CATALOG
+    ROUTES_CATALOG,
+    SharedModule
   ],
   declarations: [
     HomeComponent,

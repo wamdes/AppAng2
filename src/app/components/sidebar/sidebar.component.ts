@@ -1,4 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {QuickView} from '../../common/interfaces/quick-view';
+import {Back} from '../../common/interfaces/back';
+import {MenuList} from '../../common/interfaces/menu-list';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,64 +11,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  private _menuList = [
-    {
-      title: 'FERROVIAIRE',
-      link: 'catalogue/ferroviaire',
-      subtitles: [],
-      description: ''
-    },
-    {
-      title: 'FONCTIONS SUPPORT',
-      link: 'catalogue/support',
-      subtitles: [],
-      description: ''
-    },
-    {
-      title: 'BUREAUTIQUE',
-      link: 'catalogue/bureautique',
-      subtitles: [],
-      description: ''
-    },
-    {
-      title: 'EQUIPEMENT INFORMATIQUE',
-      link: 'catalogue/equipement',
-      subtitles: [],
-      description: ''
-    },
-    {
-      title: 'TÉLÉPHONIE',
-      link: 'catalogue/telephonie',
-      subtitles: [],
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat, 
-      leo aliquet euismod cursus, orci nibh dictum leo, vitae sollicitudin neque mi eget odio. 
-      Aliquam erat volutpat. Aliquam erat volutpat. Etiam consequat ligula vel nisi vehicula fringilla.`
-    },
-    {
-      title: 'Demandes de mouvements personnels',
-      link: 'catalogue/securite',
-      description: ''
-    },
-    {
-      title: 'Demandes de reclamation',
-      link: 'catalogue/securite',
-      description: ''
-    },
-    {
-      title: 'Demandes hors catalogue',
-      link: 'catalogue/securite',
-      description: ''
-    }
-  ];
-  private _back = {
-    link: 'catalogue',
-    title: 'CATALOGUE'
-  };
-  private _quickView = {
-    title: 'QUICKVIEW',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat, 
-      leo aliquet euismod cursus, orci nibh dictum leo toere nodd la reccutega.`
-  };
+  private _menuList: MenuList;
+  private _back: Back;
+  private _quickView: QuickView;
+
   @Input('back') set back(value: { link: string; title: string }) {
     this._back = value;
   }
@@ -75,7 +25,9 @@ export class SidebarComponent implements OnInit {
     this._quickView = value;
   }
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -91,4 +43,13 @@ export class SidebarComponent implements OnInit {
   get back(): { link: string; title: string } {
     return this._back;
   }
+
+  /**
+   * go to
+   * @param url
+   */
+  public goTo(url) {
+    this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`])
+  }
+
 }

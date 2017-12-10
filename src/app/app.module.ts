@@ -13,7 +13,7 @@ import { AppRootComponent } from './components/root/app-root.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FavorisComponent } from './components/favoris/favoris.component';
 import { PersoComponent } from './components/perso/perso.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 /**
  * pipes
@@ -23,8 +23,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
  * providers
  */
 import {SharedModule} from './modules/shared/shared.module';
-import { FooterComponent } from './components/footer/footer.component';
-import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +30,7 @@ import { CardComponent } from './components/card/card.component';
     HeaderComponent,
     FavorisComponent,
     PersoComponent,
-    SidebarComponent,
-    FooterComponent,
-    CardComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -21,19 +21,22 @@ import { CardComponent } from '../../components/card/card.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { TooltipComponent } from '../../components/tooltip/tooltip.component';
 import { PopinComponent } from '../../components/popin/popin.component';
+import {CartComponent} from "../../components/cart/cart.component";
 
 @NgModule({
   declarations: [
     CardComponent,
     SidebarComponent,
     TooltipComponent,
-    PopinComponent
+    PopinComponent,
+    CartComponent
   ],
   exports: [
     CardComponent,
     SidebarComponent,
     TooltipComponent,
-    PopinComponent
+    PopinComponent,
+    CartComponent
   ],
   imports: [
     CommonModule

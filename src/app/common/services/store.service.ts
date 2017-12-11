@@ -29,11 +29,11 @@ export class StoreService {
     return this._stores;
   }
   drag(event, item) {
-    event.dataTransfer.setData('item', item);
+    event.dataTransfer.setData('item', JSON.stringify(item));
   }
   drop(event) {
     event.preventDefault();
-    this.store = event.dataTransfer.getData('item');
+    this.store = JSON.parse(event.dataTransfer.getData('item'));
   }
   allowDrop(event) {
     event.preventDefault();

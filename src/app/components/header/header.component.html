@@ -30,14 +30,28 @@
               <a routerLink="account" routerLinkActive="active">Mon compte</a>
             </li>
             <li (drop)="stores.drop($event)"
-                (dragover)="stores.allowDrop($event)">
+                (dragover)="stores.allowDrop($event)"
+                (mouseleave)="open=null"
+            >
               <a routerLink="panier"
-                 routerLinkActive="active">
+                 routerLinkActive="active"
+                 (mouseover)="open='panier'"
+              >
                 Mon panier
                 <span  class="nd-store"
                        [innerHTML]="stores.nbStore()"
                 ></span>
               </a>
+              <app-tooltip [(open)]="open"
+                           [type]="'panier'"
+                           [addClassGlobal]="'tp-panier'"
+              >
+                <h2 class="tpl-tooltip-title">panier</h2>
+                <section class="tpl-tooltip-content">
+                  <app-cart ></app-cart>
+                </section>
+
+              </app-tooltip>
             </li>
          </ul>
        </div>

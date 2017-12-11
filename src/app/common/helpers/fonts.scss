@@ -1,0 +1,84 @@
+/*
+
+
+  Proxima:
+      "Proxima light" (400)
+
+  Avenir:
+      "Avenir LT W02 55 Roman" ==> "Avenir" regular (400)
+      "Avenir LT W02 95 Black" ==> "Avenir" bold/black/heavy (700)
+      "Avenir LT W02 35 Light" ==> "Avenir" lighter (200)
+      "Avenir LT W02 45 Book" ==> "Avenir" light (300)
+
+  Avenir Next:
+      "AvenirNextLTW02-Condens 724398"; ==> "Avenir Next" regular/condensed (400)
+      "AvenirNextLTW02-DemiCn" ==> "Avenir Next" bold (700)
+
+*/
+
+// Light
+@font-face {
+  font-family: "Proxima";
+  src: url("#{$path-font}8d5c60e0-a2b9-449c-a43f-d96f77864f21.eot?#iefix");
+  src: 	url("#{$path-font}8d5c60e0-a2b9-449c-a43f-d96f77864f21.eot?#iefix") format("eot"),
+  url("#{$path-font}978c0880-c171-4791-b0cd-64854b401b0f.woff") format("woff"),
+  url("#{$path-font}8eee92a1-1e33-4c77-b7ce-85da60d3809d.ttf") format("truetype");
+}
+
+
+/*
+ == Avenir
+*/
+// Regular
+@font-face {
+  font-family: "Avenir";
+  src: url("#{$path-font}469ea7ce-bb40-478a-aa21-da079357c969.eot?#iefix");
+  src: 	url("#{$path-font}469ea7ce-bb40-478a-aa21-da079357c969.eot?#iefix") format("eot"),
+  url("#{$path-font}5104d540-ac5c-442d-8581-1e9f4ecd37f0.woff") format("woff"),
+  url("#{$path-font}6662a841-5b52-4af6-a868-6b43e3d7b263.ttf") format("truetype");
+}
+// Bold/black/heavy
+@font-face {
+  font-family: "Avenir-heavy";
+  src: url("#{$path-font}1f5c348e-e2a8-45d4-a78f-7f61d7bfd83d.eot?#iefix");
+  src: 	url("#{$path-font}1f5c348e-e2a8-45d4-a78f-7f61d7bfd83d.eot?#iefix") format("eot"),
+  url("#{$path-font}0b86525a-9c26-4c1d-9abe-c05fd31ecf2e.woff") format("woff"),
+  url("#{$path-font}ea64e82f-5215-4e26-a15f-a6739e1c1020.ttf") format("truetype");// bolder
+}
+// Book (light)
+@font-face {
+  font-family: "Avenir-Book";
+  src: url("#{$path-font}cc232236-c38e-4181-b791-8be0f37e6f0e.eot?#iefix");
+  src: 	url("#{$path-font}cc232236-c38e-4181-b791-8be0f37e6f0e.eot?#iefix") format("eot"),
+  url("#{$path-font}493b124a-f032-4d7d-9d9b-b3ebdb18c13a.woff") format("woff"),
+  url("#{$path-font}b2470f08-706e-4417-bcb4-64e4b3cb07b0.ttf") format("truetype");
+}
+// Lighter
+@font-face {
+  font-family: "Avenir-Lighter";
+  src: url("#{$path-font}99db2616-e717-4838-a896-6dc86e37b49e.eot?#iefix");
+  src: 	url("#{$path-font}99db2616-e717-4838-a896-6dc86e37b49e.eot?#iefix") format("eot"),
+  url("#{$path-font}874c8a3d-82cd-4b46-839b-521b49950be0.woff") format("woff"),
+  url("#{$path-font}651041f0-000d-42ca-b667-939a4e0f5085.ttf") format("truetype");// lighter
+}
+
+
+/*
+ == Avenir Next
+*/
+// Regular/Condensed
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("#{$path-font}8f3da8dd-7d06-4904-89f6-c5bc40b27fde.eot?#iefix");
+  src: 	url("#{$path-font}8f3da8dd-7d06-4904-89f6-c5bc40b27fde.eot?#iefix") format("eot"),
+  url("#{$path-font}05b4d603-a34e-410b-8b5a-04827924884b.woff") format("woff"),
+  url("#{$path-font}d130a260-44b5-4cf5-8d84-fb22e0819f3c.ttf") format("truetype");
+}
+// Bold
+@font-face {
+  font-family: "Avenir-Next-B";
+  src: url("#{$path-font}4e64a596-e6f3-4505-99a2-7b420fd4bb6e.eot?#iefix");
+  src: 	url("#{$path-font}4e64a596-e6f3-4505-99a2-7b420fd4bb6e.eot?#iefix") format("eot"),
+  url("#{$path-font}0f53cf18-d64f-473f-a83b-5e288b577243.woff") format("woff"),
+  url("#{$path-font}7db12efd-4757-4214-bead-13225550e76a.ttf") format("truetype");// bold
+}

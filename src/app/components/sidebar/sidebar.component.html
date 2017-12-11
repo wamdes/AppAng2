@@ -1,6 +1,6 @@
 <section class="col-sm-4 col-xs-12 sidebar">
     <div class="back">
-      <a onclick="goTo(back.link)"
+      <a (click)="goTo(back.link)"
          routerLinkActive="active"
          class="sidebar-menu">
         <h3 [innerHTML]="back.title.toUpperCase()"></h3>
@@ -9,7 +9,7 @@
     <nav>
       <ul>
         <li *ngFor="let menu of menuList">
-          <a onclick="goTo(menu.link)"
+          <a (click)="goTo(menu.link)"
              routerLinkActive="active"
              class="sidebar-menu">
             <h2 [innerHTML]="menu.title.toUpperCase()"></h2>

@@ -1,0 +1,49 @@
+$greyish: #b0aaa7;
+$white: #ffffff;
+$brownish-grey: #646464;
+$cloudy-blue: #babbcf;
+$darkish-pink: #d71f85;
+$greyish: #b0aaa7;
+
+.d-block{
+  display: block;
+}
+
+.d-none{
+  display: none;
+}
+
+// clear
+input:required {
+  border: 0;
+  box-shadow: none;
+}
+a:focus,
+button:focus,
+a:active,
+button:active{
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+li {
+  list-style: none;
+}
+
+
+html, body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Avenir, Arial, "helvetica neue", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.mrg-pd-0{
+  margin: 0px !important;
+  padding: 0px !important;
+}

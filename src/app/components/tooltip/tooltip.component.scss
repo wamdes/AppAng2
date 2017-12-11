@@ -1,0 +1,60 @@
+/* Tooltip container */
+
+.tooltip{
+  &-contenaire{
+    padding-left: 50%;
+    padding-top: 12px;
+    width: 100%;
+    height: 0;
+  }
+  &-content::before{
+    content: "";
+    border-style: solid;
+    border-width: 0 10px 9px 10px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -9px;
+    left: 75%;
+    z-index: 11;
+    transform: translateX(-50%);
+  }
+  &-content::after{
+    content: "";
+    border-style: solid;
+    border-width: 0 11px 10px 11px;
+    border-color: transparent transparent #f4f4f4 transparent;
+    position: absolute;
+    top: -10px;
+    left: 75%;
+    z-index: 10;
+    transform: translateX(-50%);
+  }
+  &-content {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    width: 269px;
+    background: white;
+    transform: translateX(-75%);
+    border-radius: 1px;
+    box-shadow: 0 0 4px 0 rgba(157, 157, 157, 0.5);
+    border: solid 0.5px rgb(128, 128, 128);
+
+
+
+    & .pop-li{
+      font-family: Avenir-Next, Arial, "Helvetica Neue", sans-serif ;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      font-style: normal !important;
+      font-stretch: normal !important;
+      line-height: 1.53 !important;
+      letter-spacing: normal !important;
+      color: #302725 !important;
+    }
+
+    & ul{
+      padding: 5px 15px!important;
+    }
+  }
+}

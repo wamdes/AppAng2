@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
  * Common services dependencies
  */
 import { StoreService } from '../../common/services/store.service';
-import { CardComponent } from '../../components/card/card.component';
-import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 
 
 /**
@@ -16,15 +14,26 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
  * pipes
  */
 
+/**
+ * Components
+ */
+import { CardComponent } from '../../components/card/card.component';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { TooltipComponent } from '../../components/tooltip/tooltip.component';
+import { PopinComponent } from '../../components/popin/popin.component';
 
 @NgModule({
   declarations: [
     CardComponent,
-    SidebarComponent
+    SidebarComponent,
+    TooltipComponent,
+    PopinComponent
   ],
   exports: [
     CardComponent,
-    SidebarComponent
+    SidebarComponent,
+    TooltipComponent,
+    PopinComponent
   ],
   imports: [
     CommonModule

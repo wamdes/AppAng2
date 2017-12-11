@@ -1,0 +1,23 @@
+<div [class]="addClassGlobal ? addClassGlobal + ' tooltip-contenaire' : 'tooltip-contenaire'"
+     [hidden]="_controlOpen !== type"
+>
+  <section class="tooltip-content pd-px-3">
+    <header>
+      <span class="contact col-xs-10 pd-px-l-0 pd-px-t-1 pd-px-l-O pd-px-r-0 text-left">
+        <ng-content select=".tpl-tooltip-title"></ng-content>
+      </span>
+      <div  [hidden]="!iconClose"
+            (click)="close()"
+            class="text-right col-xs-2 pd-px-t-1 cursor-pointer">
+        <img class="d-inline-block" src="{{'/assets/img/close.svg'}}">
+      </div>
+      <div class="clearfix"></div>
+    </header>
+
+
+    <ng-content select=".tpl-tooltip-content"></ng-content>
+
+
+  </section>
+</div>
+

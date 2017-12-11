@@ -1,0 +1,81 @@
+$class-pd: pd-px !default;
+$base-px: 5 !default;
+
+@for $i from 0 through 8 {
+  .#{$class-pd}{
+    &-#{$i} {
+      padding: #{( $i * $base-px  )}px;
+      &-xs {
+        @media (max-width: $screen-xs-max)  {
+          padding: #{( $i * $base-px )}px !important;
+        }
+      }
+      &-sm {
+        @media (max-width: $screen-sm-max)  {
+          padding: #{( $i * $base-px )}px !important;
+        }
+      }
+    }
+    &-l {
+      &-#{$i} {
+        padding-left: #{( $i * $base-px )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-left: #{( $i * $base-px )}px !important;
+          }
+        }
+        &-sm {
+          @media (max-width: $screen-sm-max)  {
+            padding-left: #{( $i * $base-px )}px !important;
+          }
+        }
+      }
+    }
+    &-r {
+      &-#{$i} {
+        padding-right: #{( $i * $base-px )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-right: #{( $i * $base-px )}px !important;
+          }
+        }
+        &-sm {
+          @media (max-width: $screen-sm-max)  {
+            padding-right: #{( $i * $base-px )}px !important;
+          }
+        }
+      }
+    }
+    &-t {
+      &-#{$i} {
+        padding-top: #{( $i * $base-px )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-top: #{( $i * $base-px )}px !important;
+          }
+        }
+        &-sm {
+          @media (max-width: $screen-sm-max)  {
+            padding-top: #{( $i * $base-px )}px !important;
+          }
+        }
+      }
+    }
+    &-b {
+      &-#{$i} {
+        padding-bottom: #{( $i * $base-px )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-bottom: #{( $i * $base-px )}px !important;
+          }
+        }
+        &-sm {
+          @media (max-width: $screen-sm-max)  {
+            padding-bottom: #{( $i * $base-px )}px !important;
+          }
+        }
+      }
+    }
+
+  }
+}

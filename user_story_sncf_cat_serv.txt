@@ -1,0 +1,102 @@
+user story Catalogue services SNCF
+
+1-Home Page
+	composé d'un header contenant un logo
+		une searchbar
+		un lien vers catalogue SI
+		un lien  mon compte
+		un lien panier
+		
+	une barre de navigation contenant trois onglet
+		Mon catalogue
+		Tous les services
+		Mes demandes
+		
+	le corps de la page
+		sidebar gauche
+			composé d'une liste de 
+			liens vers les six categories (ferroviaire, bureautique, fonctions support, equipement informatique, telephonie, securite)
+			liens vers demandes de mouvements personnel, demandes de reclamations, demandes hors catalogue
+			bloc quickview (vignette image+text)
+		breadcrumb
+		contenu de page
+			compose de 3 bloc
+				1- un caroussel image et texte controlable (bouton de defilement et numero des vignettes)
+				2- un bloc composé de six petits blocs alignés sur deux rangs lien vers les catégories du catalogue
+				3- un bloc resumé des dernière demandes en date sous forme de tableau 4 colonnes (service demande, nature du service,date,statut)
+	un footer
+	
+2-page Categorie (ferroviare etc...)
+	compose du header + barre de nav
+	corps de la page
+		sidebar gauche
+			liens vers les sous-categories liées à la categorie selectionnée
+				au click sur un lien renvoie vers la page liste des items de la sous categorie
+			liens vers demandes de mouvements personnel, demandes de reclamations, demandes hors catalogue
+		breadcrumb
+		contenu de page
+			compose de vignettes clickables(img+ bandeau txt contenant titre, descriptif, rating) reparties sur 2 colonnes
+				au click sur la vignette 
+					un slider manuel se deploie en dessous contenant les items représentés sous forme de vignettes img background + bandeau contenant titre, descriptif, add to cart, +de details
+						+de details ouvre un popup apercu rapide type lightbox de la fiche du produit
+							la fiche se compose img, txt, bt "+de detail", bt "ajouter au panier", "voir mon panier"
+					le slider contient egalement un lien "Afficher tous" qui renvoie vers la page liste des items de la sous categorie
+				Fermer
+			un bouton elargir votre recherche
+			
+3-page liste des items
+	header + nav + sidebar gauche + breadcrumb
+	contenu de page
+		liste de items de la sous categorie représentés sous forme de vignettes img background + bandeau contenant titre, descriptif, add to cart, +de details
+		sur 2 colonnes
+		avec pagination
+		un bouton elargir votre recherche
+		
+4-page fiche item
+	header + nav + sidebar gauche + breadcrumb
+	image, titre, texte, bt "ajouter au panier" qui renvoie vers une page formulaire d'ajout de service, bt "voir mon panier", bt "elargir votre recherche"
+
+5-formulaire d'ajout de service
+	header + nav + sidebar gauche + breadcrumb
+	se compose d'un titre, un bt "voir mon panier", un bandeau en trois etapes (ajout de service,validation du panier, confirmation)
+		(page panier etape 1)formulaire ajout de service
+			champs
+				beneficiaire de la demande* => select
+				nature de la demande* => select
+				date de fin d'utilisation => calendar
+				justifiez votre besoin* => textarea
+				numero d'UC du poste de travail => text
+				Commentaire => textarea
+				Code RG* => text
+				correspondant informatique => select 
+				responsable hierarchique => text saisie intelligente (3 premiere lettres)
+				
+			id demandeur
+			
+			bt Annuler, bt "ajouter au panier"
+lors d'ajout au panier un popup type lightbox Vous venez d'ajouter au panier
+img + titre + decriptif
+bt "Retour au catalogue" 
+bt "voir mon panier"
+
+6-page panier
+	Header, nav
+	contenu en pleine page
+		titre de la page
+		3 etapes
+			formulaire ajout de service(etape 1)
+			Validation du panier (etape 2)
+				un tableau recapitulant les services ajoutés au panier
+				en 4 colonnes
+					N° du demandeur
+					service demande
+					nature du service
+					actions
+						editer(renvoie vers formulaire d'ajout de service)
+						supprimer
+			bt "Retour au catalogue", bt "valider mon panier"
+			click sur valider declenche popup lightbox "confirmez vous votre demande?" bt "valider", bt "annuler"
+			
+			Confirmation(etape 3)
+				page texte (Votre demande a bien ete prise en compte, ou erreur)
+				bt "retour au catalogue"

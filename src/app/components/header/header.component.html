@@ -24,11 +24,12 @@
           placeholder="Recherche"/>
         <ul class="action-menu">
             <li>
-              <a routerLink="account" routerLinkActive="active">Mes préférés</a>
+              <a routerLink="account" routerLinkActive="active"><img src="/assets/img/account.png"
+     srcset="/assets/img/account@2x.png 2x,
+             /assets/img/account@3x.png 3x"
+     class="Group"></a>
             </li>
-            <li>
-              <a routerLink="account" routerLinkActive="active">Mon compte</a>
-            </li>
+<<<<<<< HEAD
             <li (drop)="stores.drop($event)"
                 (dragover)="stores.allowDrop($event)">
               <a routerLink="panier"
@@ -38,6 +39,13 @@
                        [innerHTML]="stores.nbStore()"
                 ></span>
               </a>
+=======
+            <li ondrop="stores.drop(event)" ondragover="stores.allowDrop(event)">
+              <a routerLink="panier" routerLinkActive="active"><img src="/assets/img/cart.png"
+     srcset="/assets/img/cart@2x.png 2x,
+             /assets/img/cart@3x.png 3x"
+     class="Group"><span  class="nd-store" [innerHTML]="stores.nbStore()"></span></a>
+>>>>>>> master
             </li>
          </ul>
        </div>

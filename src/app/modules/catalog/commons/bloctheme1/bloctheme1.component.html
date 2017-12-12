@@ -1,3 +1,7 @@
 <ul>
- <li *ngFor="let item of ItemsByCat" [innerHTML]='item.Nom'></li>
+ <li *ngFor="let i of Catlist">{{i}}</li>
  </ul>
+
+ <ul>
+  <li *ngFor="let item of ItemsList">{{item.Nom}}</li>
+  </ul>

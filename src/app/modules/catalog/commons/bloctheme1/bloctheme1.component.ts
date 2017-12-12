@@ -12,20 +12,30 @@ import {SncfItems} from '../../../../common/interfaces/sncf-items';
   styleUrls: ['./bloctheme1.component.css']
 })
 export class Bloctheme1Component implements OnInit {
-  public ItemsByCat:SncfItems;
-  public arrayOfKeys;
+  public ItemsList:SncfItems;
+  public Cat:Set<any>
+  public Catlist
   constructor(private http: Http){}
 
 getItems(){
      return this.http.get('assets/docs/FileServices.json')
-			.map((response: Response) =>response.json().catalogue.services.filter(services  =>services.SubCategorie==="Capacités"))
+			.map((response: Response) =>response.json().catalogue.services.filter(services  =>services.Categorie==="Services Ferroviaires"))//(services  =>services.SubCategorie==="Capacités"))
 
 
 }
-	ngOnInit() {
-  return this.getItems().subscribe(res=> {
-    this.ItemsByCat = res
 
+	ngOnInit() {
+    this.getItems().subscribe(res=> {
+      this.ItemsList = res;
+      let Cat = new Set()
+      //let Catlist
+      res.forEach(function(v,i){
+        Cat.add(v.SubCategorie);
+      })
+      this.Catlist = Array.from(Cat)
+      return this.Catlist
+    //return this.Catlist
+    //this.ItemsList = res
   }
 );
 

@@ -8,7 +8,8 @@
                    [menuList1]="menuList1"
 									 [menuList2]="menuList2"
       ></app-sidebar>
-      
+      <app-card *ngFor="let model of items"
+                [model]="model"></app-card>
 
     </div>
 	</article>

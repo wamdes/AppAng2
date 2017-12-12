@@ -37,7 +37,7 @@ import {SharedModule} from "../shared/shared.module";
     Bloctheme2Component,
     EquipementComponent,
     TelephonieComponent
-	
+
   ]
 
 })

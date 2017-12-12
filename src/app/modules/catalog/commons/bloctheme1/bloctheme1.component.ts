@@ -1,10 +1,10 @@
+import { Component, OnInit } from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import { CommonModule } from '@angular/common';
-import {SncfItems} from '../../common/interfaces/sncf-items';
+import {SncfItems} from '../../../../common/interfaces/sncf-items';
 
 @Component({
   selector: 'app-bloctheme1',
@@ -12,20 +12,28 @@ import {SncfItems} from '../../common/interfaces/sncf-items';
   styleUrls: ['./bloctheme1.component.css']
 })
 export class Bloctheme1Component implements OnInit {
-
+  public ItemsByCat:SncfItems;
+  public arrayOfKeys;
   constructor(private http: Http){}
-	getItems() {
 
-        return this.http.get('assets/docs/FileServices.json')
-			.map((response: Response) => {
-				return response.json().catalogue.services.filter(services  =>services.Categorie==="Services Ferroviaires")
-
-      });
-	}
+getItems(){
+     return this.http.get('assets/docs/FileServices.json')
+			.map((response: Response) =>response.json().catalogue.services.filter(services  =>services.SubCategorie==="Capacités"))
 
 
+}
 	ngOnInit() {
-      return this.getItems().subscribe(data => {return data)});
+  return this.getItems().subscribe(res=> {
+    this.ItemsByCat = res
+
+  }
+);
+
+//this.ItemsByCat = this.getItems().subscribe(res=>this.ItemsByCat=res);
+
+
+//console.log("data :" +this.getItems().subscribe(data => {data}));
+
 	 //console.log(my_cats)
 
   }

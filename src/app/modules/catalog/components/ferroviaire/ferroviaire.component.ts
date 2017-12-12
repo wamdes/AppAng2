@@ -6,7 +6,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import { CommonModule } from '@angular/common';
-import {SncfItems} from '../../common/interfaces/sncf-items';
+
 
 @Component({
   selector: 'app-ferroviaire',
@@ -19,19 +19,11 @@ export class FerroviaireComponent implements OnInit {
 
 
 
-  constructor(private http: Http){}
-	getItems() {
-
-        return this.http.get('assets/docs/FileServices.json')
-			.map((response: Response) => {
-				return response.json().catalogue.services.filter(services  =>services.Categorie==="Services Ferroviaires")
-
-      });
-	}
+  constructor(){}
 
 
 	ngOnInit() {
-      this.getItems().subscribe(data => {return ItemsByCat = data)});
+
 	 //console.log(my_cats)
 
   }

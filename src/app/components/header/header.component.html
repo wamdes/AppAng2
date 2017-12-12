@@ -27,25 +27,16 @@
               <a routerLink="account" routerLinkActive="active"><img src="/assets/img/account.png"
      srcset="/assets/img/account@2x.png 2x,
              /assets/img/account@3x.png 3x"
-     class="Group"></a>
+     class="Group"><p class="sub_title" >Mon compte</p></a>
             </li>
-<<<<<<< HEAD
-            <li (drop)="stores.drop($event)"
-                (dragover)="stores.allowDrop($event)">
-              <a routerLink="panier"
-                 routerLinkActive="active">
-                Mon panier
-                <span  class="nd-store"
-                       [innerHTML]="stores.nbStore()"
-                ></span>
-              </a>
-=======
+
             <li ondrop="stores.drop(event)" ondragover="stores.allowDrop(event)">
+							<span  class="nd-store" [innerHTML]="stores.nbStore()"></span>
               <a routerLink="panier" routerLinkActive="active"><img src="/assets/img/cart.png"
      srcset="/assets/img/cart@2x.png 2x,
              /assets/img/cart@3x.png 3x"
-     class="Group"><span  class="nd-store" [innerHTML]="stores.nbStore()"></span></a>
->>>>>>> master
+     class="Group"><p class="sub_title">Mon panier</p></a>
+
             </li>
          </ul>
        </div>

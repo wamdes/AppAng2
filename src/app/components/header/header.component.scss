@@ -54,6 +54,7 @@
          display: inline-block;
          padding: 2px 18px;
          white-space: normal;
+         text-align:center;
          a {
            text-decoration: none;
            font-family: Avenir;
@@ -62,6 +63,7 @@
            text-align: center;
            color: rgb(255, 255, 255);
          }
+
        }
      }
    }
@@ -97,6 +99,7 @@
               height: 7px;
             }
             hr{
+              margin-top:0;
               width: 112px;
               height: 2px;
               background: #555;
@@ -119,13 +122,13 @@
      padding: 4px 2px 2px 2px;
      color: white;
      display: inline-block;
-	 margin:-25px -5px 0 0
+     float:right;
+	 margin:-10px 0 0 -25px
    }
-   
+   .sub_title{text-align:center;clear:both;}
    .Group {
   width: 22px;
   height: 21px;
   object-fit: contain;
 }
 }
-

@@ -1,14 +1,35 @@
 <section class="col-sm-4 col-xs-12 sidebar">
-    <div class="back">
-      <a (click)="goTo(back.link)"
+    <!--div class="back">
+      <a onclick="goTo(back.link)"
          routerLinkActive="active"
          class="sidebar-menu">
         <h3 [innerHTML]="back.title.toUpperCase()"></h3>
       </a>
-    </div>
+    </div-->
     <nav>
       <ul>
-        <li *ngFor="let menu of menuList">
+        <li *ngFor="let menu of menuList1">
+          <a (click)="goTo(menu.link)"
+             routerLinkActive="active"
+             class="sidebar-menu">
+            <h2 [innerHTML]="menu.title.toUpperCase()" [ngStyle]="{color:menu.color}"></h2>
+          </a>
+          <ul>
+            <li *ngFor="let submenu of menu.subtitles">
+              <a (click)="goTo(submenu.link)"
+                 routerLinkActive="active"
+                 >
+                <p class="sidebar-menu-sub" [innerHTML]="submenu.title.toUpperCase()" ></p>
+              </a>
+            </li>
+          </ul>
+          <!--p *ngIf="menu.description" [innerHTML]="menu.description"></p-->
+        </li>
+      </ul>
+      <hr>
+          <ul>
+
+        <li *ngFor="let menu of menuList2">
           <a (click)="goTo(menu.link)"
              routerLinkActive="active"
              class="sidebar-menu">
@@ -23,5 +44,3 @@
       <p [innerHTML]="quickView.description"></p>
     </aside>
 </section>
-
-

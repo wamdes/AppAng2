@@ -38,7 +38,7 @@
       width: 90%;
       line-height: 1;
     }
-	
+
     &:after{
       content:url(/assets/img/arrow.png);
       width: 8%;
@@ -46,10 +46,12 @@
       display: inline-block;
       vertical-align: middle;
 	  font-weight:bold;
-	  
+
     }
-	
+
   }
+  .sidebar-menu-sub{}
+  
 	.active:after{
 	  color: #000;
 	  transform: rotate(-90deg);

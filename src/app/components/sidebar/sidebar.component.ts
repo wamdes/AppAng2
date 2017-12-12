@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {QuickView} from '../../common/interfaces/quick-view';
-import {Back} from '../../common/interfaces/back';
+//import {Back} from '../../common/interfaces/back';
 import {MenuList} from '../../common/interfaces/menu-list';
 
 @Component({
@@ -11,15 +11,19 @@ import {MenuList} from '../../common/interfaces/menu-list';
 })
 export class SidebarComponent implements OnInit {
 
-  private _menuList: MenuList;
-  private _back: Back;
+  private _menuList1: MenuList;
+  private _menuList2: MenuList;
+  //private _back: Back;
   private _quickView: QuickView;
 
-  @Input('back') set back(value: { link: string; title: string }) {
+  /*@Input('back') set back(value: { link: string; title: string }) {
     this._back = value;
+  }*/
+  @Input('menuList1') set menuList1(value) {
+    this._menuList1 = value;
   }
-  @Input('menuList') set menuList(value) {
-    this._menuList = value;
+  @Input('menuList2') set menuList2(value) {
+    this._menuList2 = value;
   }
   @Input('quickView') set quickView(value) {
     this._quickView = value;
@@ -32,17 +36,21 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  get menuList() {
-    return this._menuList;
+  get menuList1() {
+    return this._menuList1;
+  }
+
+  get menuList2() {
+    return this._menuList2;
   }
 
   get quickView(): { title: string; description: string } {
     return this._quickView;
   }
 
-  get back(): { link: string; title: string } {
+  /*get back(): { link: string; title: string } {
     return this._back;
-  }
+  }*/
 
   /**
    * go to

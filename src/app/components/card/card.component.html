@@ -1,15 +1,16 @@
+
 <figure class="col-sm-3 col-xs-6 bloc_categorie"
-        [style.backgroundImage]="model.image"
+        [style.backgroundImage]="model.iconLarge"
         (click)="model.show = !(model.show)">
   <aside class="libelle">
-    <h3 [innerHTML]="model.title"></h3>
-    <p [innerHTML]="model.description"></p>
+    <h3 [innerHTML]="model.Nom"></h3>
+    <p [innerHTML]="model.Contenu"></p>
   </aside>
 </figure>
 
-<section *ngIf="model.show">
+<section *ngIf="model.show" class="col-sm-12 col-xs-6 bloc_categorie">
   <ul class="row">
-    <li *ngFor="let item of model.items" class="col-sm-3 col-xs-6 bloc_categorie" [style.backgroundImage]="item.image">
+    <li *ngFor="let item of model.items" class="col-sm-2 col-xs-6 bloc_categorie" [style.backgroundImage]="item.image">
       <div class="close"
            (click)="model.show = !(model.show)"
       >

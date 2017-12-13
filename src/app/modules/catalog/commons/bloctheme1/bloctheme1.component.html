@@ -3,12 +3,15 @@
 
 <div *ngIf="_param1 == 'Categorie'">
       <ul>
- <li *ngFor="let i of Catlist">{{i}}</li>
+        <app-card *ngFor="let model of CatList"
+                  [model]="model"></app-card>
  </ul>
 </div>
 <div *ngIf="_param1 == 'SubCategorie'">
- <ul>
-  <li *ngFor="let item of ItemsList">{{item.Nom}}</li>
-  </ul>
+
+
+   <app-card *ngFor="let model of ItemsList"
+             [model]="model"></app-card>
+
 </div>
 </div>

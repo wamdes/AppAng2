@@ -8,9 +8,10 @@ import {StoreService} from '../../common/services/store.service';
 })
 export class HeaderComponent implements OnInit {
   public tabList = [
-    { name: 'MON CATALOGUE', color: 'rgb(110, 30, 120)', link: 'demandes'},
-    { name: 'TOUS LES SERVICES', color: 'rgb(225, 182, 18)', link: 'catalogue'},
-    { name: 'MES DEMANDES', color: 'rgb(205, 0, 55)', link: 'perso'}
+    { name: 'MON CATALOGUE', color: 'rgb(110, 30, 120)', link: 'perso'},
+    { name: 'MES SERVICES', color: 'rgb(205, 0, 55)', link: 'service_perso'},
+    { name: 'MES DEMANDES', color: 'rgb(205, 0, 55)', link: 'request'},
+    {name: 'TOUS LES SERVICES', color: 'rgb(225, 182, 18)', link: 'catalogue'}
   ];
   constructor(public stores: StoreService) { }
 

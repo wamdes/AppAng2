@@ -19,7 +19,7 @@
               <a (click)="goTo(submenu.link)"
                  routerLinkActive="active"
                  >
-                <p class="sidebar-menu-sub" [innerHTML]="submenu.link" ></p>
+                <p class="sidebar-menu-sub" [innerHTML]="submenu.title.toUpperCase()" ></p>
               </a>
             </li>
           </ul>
@@ -33,7 +33,7 @@
           <a (click)="goTo(menu.link)"
              routerLinkActive="active"
              class="sidebar-menu">
-            <h2 [innerHTML]="menu.title.toUpperCase()"></h2>
+            <h3 [innerHTML]="menu.title.toUpperCase()"></h3>
           </a>
           <p *ngIf="menu.description" [innerHTML]="menu.description"></p>
         </li>

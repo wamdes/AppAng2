@@ -22,6 +22,10 @@ const routesParams: Routes = [
     loadChildren: 'app/modules/cart/cart.module#CartModule'
   },
   {
+    path: 'checkout',
+    loadChildren: 'app/modules/checkout/checkout.module#CheckoutModule'
+  },
+  {
     path: 'perso',
     component: PersoComponent
   },

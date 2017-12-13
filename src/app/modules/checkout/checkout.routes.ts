@@ -18,15 +18,20 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
 const CheckoutRoutesParams: Routes = [
   {
     path: '',
-    component: ConfirmComponent
+    redirectTo: 'checkout',
+    pathMatch: 'full'
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent
   },
   {
     path: 'form',
     component: FormComponent
   },
   {
-    path: 'checkout',
-    component: CheckoutComponent
+    path: 'confirm',
+    component: ConfirmComponent
   }
 
 ];

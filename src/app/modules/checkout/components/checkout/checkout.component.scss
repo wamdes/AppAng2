@@ -1,0 +1,58 @@
+section{
+  & > .tab{
+    border-top:10px;
+    border-left:7px;
+    border-bottom:10px;
+    border-right:7px;
+    border-color:#82be00;
+    border-style: solid;
+
+    & > h3{
+      padding-left:25px;
+       & > .green{color:#82be00;text-align:left}
+    }
+    & > table{
+      margin-left:auto;
+      margin-right:auto;
+      width:97%;
+      font-weight:600;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      & > thead{
+
+        & > tr{
+          & > th{padding:2px 5px;background-color:#82be00;color:#fff;text-align:left;padding:0px 5px;}
+        }
+      }
+      & > tbody{
+        & > tr > td{
+          padding:1px 5px;
+            & > img{height:80%;width:auto;padding:2px 0px}
+        }
+        & > tr.odd{}
+        & > tr.even{background-color:#ddd;}
+      }
+    }
+  }
+    & > .bt{
+      font-family: Avenir;
+      font-size: 22.9px;
+      line-height: 1.64;
+      text-align: center;
+      color: #ffffff;
+      padding-top:7px;
+      margin:20px 0 20px 40px;
+      float:right;
+    }
+    & > .bt-sncf-del{
+      background-image : url('assets/img/bt-orange.png');
+      width:249px;
+      height:61px;
+
+    }
+    & > .bt-sncf-ok{text-align:center;color:#fff;background-image : url('assets/img/bt-blue.png');height:61px;width:249px}
+    & > .bt-sncf-search{text-align:center;color:#fff;background-image : url('assets/img/bt-purple.png');width: 307px;
+    height: 91px;}
+    & > hr{border-color:#ddd; clear:both;}
+
+}

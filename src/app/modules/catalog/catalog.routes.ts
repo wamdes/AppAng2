@@ -10,6 +10,7 @@ import {BureautiqueComponent} from './components/bureautique/bureautique.compone
 import {SupportComponent} from './components/support/support.component';
 import {EquipementComponent} from './components/equipement/equipement.component';
 import {TelephonieComponent} from './components/telephonie/telephonie.component';
+import {Bloctheme1Component} from './commons/bloctheme1/bloctheme1.component';
 
 
 
@@ -24,8 +25,14 @@ const catalogRoutesParams: Routes = [
   },
   {
     path: 'ferroviaire',
-    component: FerroviaireComponent
-  },
+    component: FerroviaireComponent,
+},
+    { path: 'ferroviaire/capacites', component: FerroviaireComponent },
+    { path: 'ferroviaire/circulation', component: FerroviaireComponent },
+      //{ path: 'circulation', component: FerroviaireComponent },
+      //{ path: 'circulation', component: FerroviaireComponent }
+
+
   {
     path: 'support',
     component: SupportComponent
@@ -48,4 +55,3 @@ const catalogRoutesParams: Routes = [
  * @type {ModuleWithProviders}
  */
 export const ROUTES_CATALOG: ModuleWithProviders = RouterModule.forChild(catalogRoutesParams);
-

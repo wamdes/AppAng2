@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     { name: 'MES DEMANDES', color: 'rgb(205, 0, 55)', link: 'perso'}
   ];
   constructor(public stores: StoreService) { }
-	
+
   ngOnInit() {
   }
 

@@ -1,4 +1,4 @@
-<figure class="col-sm-2 col-xs-6 bloc_categorie"
+<figure class="col-sm-3 col-xs-6 bloc_categorie"
         [style.backgroundImage]="model.image"
         (click)="model.show = !(model.show)">
   <aside class="libelle">
@@ -9,7 +9,7 @@
 
 <section *ngIf="model.show">
   <ul class="row">
-    <li *ngFor="let item of model.items" class="col-sm-2 col-xs-6 bloc_categorie" [style.backgroundImage]="item.image">
+    <li *ngFor="let item of model.items" class="col-sm-3 col-xs-6 bloc_categorie" [style.backgroundImage]="item.image">
       <div class="close"
            (click)="model.show = !(model.show)"
       >

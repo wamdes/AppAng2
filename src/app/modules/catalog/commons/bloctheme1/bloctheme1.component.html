@@ -1,7 +1,14 @@
-<ul>
+<div class="col-md-8 col-xs-12">
+
+
+<div *ngIf="_param1 == 'Categorie'">
+      <ul>
  <li *ngFor="let i of Catlist">{{i}}</li>
  </ul>
-
+</div>
+<div *ngIf="_param1 == 'SubCategorie'">
  <ul>
   <li *ngFor="let item of ItemsList">{{item.Nom}}</li>
   </ul>
+</div>
+</div>

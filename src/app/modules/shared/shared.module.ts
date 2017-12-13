@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
  * Common services dependencies
  */
 import { StoreService } from '../../common/services/store.service';
+import { ItemsService } from '../../common/services/items.service';
 
 
 /**
@@ -43,7 +44,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [StoreService]
+      providers: [StoreService,ItemsService]
     };
   }
 }

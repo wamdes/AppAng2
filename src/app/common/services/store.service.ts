@@ -38,4 +38,7 @@ export class StoreService {
   allowDrop(event) {
     event.preventDefault();
   }
+
+
+
 }

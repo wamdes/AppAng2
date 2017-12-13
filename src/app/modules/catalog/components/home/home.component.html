@@ -1,13 +1,9 @@
 <section>
 
-	<article class="col-sm-12 col-xs-12">
+	<article class="col-sm-8 col-xs-12">
 
 		<div class="row">
-			<app-sidebar [quickView]="quickView"
 
-                   [menuList1]="menuList1"
-									 [menuList2]="menuList2"
-      ></app-sidebar>
       <app-card *ngFor="let model of items"
                 [model]="model"></app-card>
 

@@ -13,12 +13,19 @@ import {TelephonieComponent} from './components/telephonie/telephonie.component'
 import {Bloctheme1Component} from './commons/bloctheme1/bloctheme1.component';
 
 
-
 /**
  * routes modules
  * @type Routes
  */
 const catalogRoutesParams: Routes = [
+
+
+
+
+
+
+
+
   {
     path: '',
     component: HomeComponent

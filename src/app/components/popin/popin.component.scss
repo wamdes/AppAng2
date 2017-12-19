@@ -1,0 +1,136 @@
+$screen-xs-max : 767px !default;
+$screen-sm-max : 991px !default;
+
+app-popin {
+  &.isRelative {
+    position: relative;
+    @media (max-width: $screen-xs-max)  {
+      position: fixed;
+    }
+  }
+  position: fixed;
+  z-index: 200;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
+
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  @media (max-width: $screen-xs-max)  {
+    background: white;
+    opacity: 1;
+  }
+}
+
+
+.popin{
+  position: fixed;
+  z-index: 999;
+  width: 660px;
+  top: calc(50% - (247px / 2));
+  left: calc(50% - (660px / 2));
+  @media (max-width: $screen-xs-max) {
+    position: absolute;
+    width:100%;
+    top:0 !important;
+    left:0;
+  }
+  @media (max-width: $screen-sm-max)  {
+    top: 25%;
+  }
+  & header {
+    & .cursor-pointer {
+      text-align: right;
+      padding-top: 20px;
+    }
+  }
+  &.recap-popin {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 70px;
+    width: calc(100% - 10%);
+    height: 100%;
+    margin: 0 auto;
+    @media (max-width: $screen-xs-max)  {
+      position: fixed;
+      height: 100%;
+      top: 0;
+      width: 100%;
+    }
+    & .popin-center {
+      padding:0;
+      @media (max-width: $screen-xs-max)  {
+        overflow-y: scroll;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+      }
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  & .popin-center {
+    background: white;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    & .cursor-pointer {
+      z-index: 9999;
+    }
+  }
+
+  & .pop-li{
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    color: #302725;
+  }
+  &-title {
+    padding-left: 0;
+    font-family: Avenir;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #515151;
+  }
+  & header {
+    margin-bottom: 10px;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    & .cursor-pointer {
+      padding: 0;
+    }
+  }
+}
+.icon{
+  &-close{
+    background-image: url('assets/close.png');
+    background-position: center center;
+    background-size: contain;
+  }
+}

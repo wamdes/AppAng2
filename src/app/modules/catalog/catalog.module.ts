@@ -20,6 +20,7 @@ import { TelephonieComponent } from './components/telephonie/telephonie.componen
 import { Bloctheme2Component } from './commons/bloctheme2/bloctheme2.component';
 import {SharedModule} from "../shared/shared.module";
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -36,6 +37,7 @@ import {SharedModule} from "../shared/shared.module";
     Bloctheme2Component,
     EquipementComponent,
     TelephonieComponent
+	
   ]
 
 })

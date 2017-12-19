@@ -1,3 +1,18 @@
-<p>
-  ferroviaire works!
-</p>
+<section>
+ <article class="col-sm-12 col-xs-12">
+
+   <div class="row">
+<div class="col-sm-3">
+ <app-sidebar [quickView]="quickView"
+
+        [menuList1]="menuList1"
+        [menuList2]="menuList2"
+></app-sidebar>
+   </div>
+   <div class="col-sm-8">
+      <app-card *ngFor="let model of items"
+                [model]="model"></app-card>
+</div>
+    </div>
+ </article>
+</section>

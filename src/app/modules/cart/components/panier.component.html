@@ -1,3 +1,25 @@
-<p>
-  panier works!
-</p>
+<div class="row">
+<section class="tab col-sm-11 col-xs-12">
+  <h2>MES DEMANDES DE <span class="green">SERVICES SI</span></h2>
+  <table cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+          <th><input type="checkbox"/></th>
+          <th>SERVICE DEMANDE</th>
+          <th>NATURE DU SERVICE</th>
+          <th>DATE DE CREATION</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of requests">
+          <td><input type='checkbox'></td>
+          <td [innerHTML]="request.Nom"></td>
+          <td [innerHTML]="request.Categorie"></td>
+          <td [innerHTML]="request.crea"></td>
+          <td><img src="assets/img/picto-trash.png"></td>
+        </tr>
+      </tbody>
+  </table>
+</section>
+</div>

@@ -11,16 +11,21 @@ import {MenuList} from '../../common/interfaces/menu-list';
 })
 export class SidebarComponent implements OnInit {
 
-  private _menuList: MenuList;
-  private _back: Back;
+  private _menuList1: MenuList;
+  private _menuList2: MenuList;
+  //private _back: Back;
   private _quickView: QuickView;
-
-  @Input('back') set back(value: { link: string; title: string }) {
+  public selected:any;
+  /*@Input('back') set back(value: { link: string; title: string }) {
     this._back = value;
+  }*/
+  @Input('menuList1') set menuList1(value) {
+    this._menuList1 = value;
   }
-  @Input('menuList') set menuList(value) {
-    this._menuList = value;
+  @Input('menuList2') set menuList2(value) {
+    this._menuList2 = value;
   }
+
   @Input('quickView') set quickView(value) {
     this._quickView = value;
   }
@@ -28,21 +33,29 @@ export class SidebarComponent implements OnInit {
   constructor(
     private _router: Router
   ) { }
-
+  select(item){
+       this.selected = (this.selected === item ? null : item);
+    }
+    isActive(item){
+      return this.selected === item;
+    }
   ngOnInit() {
   }
 
-  get menuList() {
-    return this._menuList;
+  get menuList2() {
+    return this._menuList2;
+  }
+  get menuList1() {
+    return this._menuList1;
   }
 
   get quickView(): { title: string; description: string } {
     return this._quickView;
   }
 
-  get back(): { link: string; title: string } {
+/*  get back(): { link: string; title: string } {
     return this._back;
-  }
+  }*/
 
   /**
    * go to

@@ -1,15 +1,36 @@
+figure{
+margin:20px;
+background-repeat:no-repeat;
+object-fit:contain;
+padding:0px;
+.libelle{
+  float: left;
+  width: 100%;
+  height: 25%;
+  background:#fff;
+  opacity:0.9;
+  margin-top:40%;
+  padding:15px;
+}
+}
 .bloc_categorie {
-  background:#00f000;
-  padding: 0;
-  margin: 10px 10px;
-  height: 200px;
-  text-align:center;
-  & .libelle{
-    margin-top: 150px;
+  background: #00f000;
+    padding: 20px 0;
+    margin: 10px 10px;
+    height: auto;
+    text-align: center;
+    clear: both;
     float: left;
     width: 100%;
-    height: 25%;
-    background:#fff;
-    opacity:0.9;
+  li{
+    list-style:none;
+    display:inline-block;
+    & .libelle{
+      float: left;
+      width: 100%;
+      height: 25%;
+      background:#fff;
+      opacity:0.9;
+    }
   }
 }

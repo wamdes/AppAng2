@@ -1,0 +1,9 @@
+<article>
+  <ul>
+    <li *ngFor="let cart of store.stores">
+      <h3 [innerHTML]="cart.title"></h3>
+      <p [innerHTML]="cart.description"></p>
+      <figure [style.backgroundImage]="cart.image"></figure>
+    </li>
+  </ul>
+</article>

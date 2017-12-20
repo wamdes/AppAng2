@@ -1,21 +1,34 @@
-<section class="col-sm-4 col-xs-12 sidebar">
-    <div class="back">
-      <a (click)="goTo(back.link)"
-         routerLinkActive="active"
-         class="sidebar-menu">
-        <h3 [innerHTML]="back.title.toUpperCase()"></h3>
-      </a>
-    </div>
+<section class="sidebar">
+
     <nav>
       <ul>
-        <li *ngFor="let menu of menuList">
-          <a (click)="goTo(menu.link)"
-             routerLinkActive="active"
+        <li *ngFor="let menu of menuList"
+            [class.active]="checkActive(currentPath)">
+          <a (click)="goTo(menu.link);"
              class="sidebar-menu">
-            <h2 [innerHTML]="menu.title.toUpperCase()"></h2>
+            <h2 [innerHTML]="menu.title.toUpperCase()"
+                [style.color]="menu.color"></h2>
+            <img src="{{menu.arrow}}">
           </a>
           <p *ngIf="menu.description" [innerHTML]="menu.description"></p>
+          <ul>
+
+            <li *ngFor="let submenu of menu.subtitles"
+                [class.active]="checkActive(submenu.link)"
+                (mouseover)="background-color">
+
+              <a (click)="goTo(submenu.link);"
+                 class="sidebar-submenu">
+                <p [innerHTML]="submenu.title.toUpperCase()"></p>
+              </a>
+              <p *ngIf="submenu.description"
+                 [innerHTML]="submenu.description"></p>
+            </li>
+
+          </ul>
+
         </li>
+
       </ul>
     </nav>
     <aside>
@@ -23,5 +36,3 @@
       <p [innerHTML]="quickView.description"></p>
     </aside>
 </section>
-
-

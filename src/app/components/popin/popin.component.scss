@@ -1,3 +1,6 @@
+$screen-xs-max : 767px !default;
+$screen-sm-max : 991px !default;
+
 app-popin {
   &.isRelative {
     position: relative;

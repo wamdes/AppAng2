@@ -12,7 +12,18 @@
       padding: 0;
       outline: 0;
       vertical-align: middle;
-    }
+      cursor:pointer;
+}
+.active{
+
+  ul{
+    display:block !important;
+      li:hover{
+        opacity:0.8
+      }
+  }
+}
+
   }
   &-menu{
     padding: 8px;
@@ -38,17 +49,17 @@
       width: 90%;
       line-height: 1;
     }
-	
-    &:after{
-      content:url(/assets/img/arrow.png);
+
+    img{
+
       width: 8%;
 	  height:10%;
       display: inline-block;
       vertical-align: middle;
 	  font-weight:bold;
-	  
-    }
-	
+
+  }
+
   }
 	.active:after{
 	  color: #000;
@@ -65,13 +76,13 @@
         vertical-align: middle;
         margin: 0;
       }
-      &:before{
+      /*&:before{
         content:url(/assets/img/arrow.png);;
         width: 8%;
         display: inline-block;
         vertical-align: middle;
 		transform: rotate(-180deg);
-      }
+  }*/
       &:after{
         content: '';
         display: none;

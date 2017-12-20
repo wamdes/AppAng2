@@ -23,6 +23,7 @@ import { FooterComponent } from './components/footer/footer.component';
  * providers
  */
 import {SharedModule} from './modules/shared/shared.module';
+import {CartComponent} from "./components/cart/cart.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {SharedModule} from './modules/shared/shared.module';
     HeaderComponent,
     FavorisComponent,
     PersoComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

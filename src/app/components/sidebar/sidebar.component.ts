@@ -112,7 +112,7 @@ export class SidebarComponent implements OnInit {
    * @param url
    */
   public goTo(url) {
-    this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`])
+    this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`]);
   }
 
 }

@@ -36,9 +36,9 @@
         <li *ngFor="let menufix of listMenuFix"
             [class.active]="checkActive(currentPath)">
 
-          <a (click)="goTo(menufix.link);"
+          <a (click)="goTo(menufix?.link);"
              class="sidebar-menu">
-            <h2 [innerHTML]="menufix.title"
+            <h2 [innerHTML]="menufix?.title"
                 [style.color]="colorMenu(menufix)"></h2>
             <img [src]="arrowMenu(menufix)">
           </a>
@@ -49,7 +49,7 @@
 
 
     <aside>
-      <h2 [innerHTML]="quickView.title"></h2>
-      <p [innerHTML]="quickView.description"></p>
+      <h2 [innerHTML]="quickView?.title"></h2>
+      <p [innerHTML]="quickView?.description"></p>
     </aside>
 </section>

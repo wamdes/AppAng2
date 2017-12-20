@@ -1,6 +1,6 @@
 <section class="sidebar">
 
-    <nav class="sidebar-menu">
+    <nav class="sidebar-omenu">
       <ul>
         <li *ngFor="let menu of menuList?.listNiv1"
             [class.active]="checkActive(currentPath)">
@@ -12,7 +12,7 @@
             <img [src]="arrowMenu(menu)">
           </a>
 
-          <ul class="sidebar-submenu">
+          <ul class="sidebar-isubmenu">
             <li *ngFor="let submenu of menuList?.listNv2[menu]"
                 [class.active]="checkActive(submenu?.link)"
                 >

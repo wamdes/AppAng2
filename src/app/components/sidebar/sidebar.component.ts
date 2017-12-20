@@ -15,7 +15,20 @@ export class SidebarComponent implements OnInit {
   private _menuList: MenuList;
   private _back: Back;
   private _quickView: QuickView;
-  public listMenuFix = [];
+  public listMenuFix = [
+    {
+      link: '',
+      title: 'demande de mouvement DE personnel'
+    },
+    {
+      link: '',
+      title: 'demande de reclamation'
+    },
+    {
+      link: '',
+      title: 'demande hors catalogue'
+    }
+  ];
 
   /*@Input('back') set back(value: { link: string; title: string }) {
     this._back = value;
@@ -24,6 +37,10 @@ export class SidebarComponent implements OnInit {
   public currentPath: undefined|string = document.location.pathname;
   @Input('menuList') set menuList(arrayValue) {
     this._menuList = arrayValue;
+
+  }
+  @Input('quickView') set quickView(arrayValue) {
+    this._quickView = arrayValue;
 
   }
 

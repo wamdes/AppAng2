@@ -29,6 +29,7 @@ export class SidebarComponent implements OnInit {
       title: 'demande hors catalogue'
     }
   ];
+  private _typeMenu: string;
 
   /*@Input('back') set back(value: { link: string; title: string }) {
     this._back = value;
@@ -41,7 +42,9 @@ export class SidebarComponent implements OnInit {
   }
   @Input('quickView') set quickView(arrayValue) {
     this._quickView = arrayValue;
-
+  }
+  @Input('typeMenu') set typeMenu(typeMenu: string) {
+    this._typeMenu = typeMenu;
   }
 
   constructor(
@@ -87,11 +90,31 @@ export class SidebarComponent implements OnInit {
   }
 
   arrowMenu(title) {
-    return `/assets/img/${title.toString().toLowerCase().replace(/\s/g, '')}-arrow.png`;
+    return `/assets/img/${title
+      .toString()
+      .toLowerCase()
+      .replace(/(é|è|ë|ê)/g, 'e')
+      .replace(/(à|ã|ä|â)/g, 'a')
+      .replace(/(î|ï)/g, 'i')
+      .replace(/(ò|ö|ô)/g, 'o')
+      .replace(/(,|\.|\?|\!)/g, '')
+      .replace(/(u|ü|ù)/g, 'u')
+      .replace(/ç/g, 'c')
+      .replace(/\s/g, '')}-arrow.png`;
   }
 
   checkActive(url) {
-    return new RegExp(url).test(this.currentPath);
+    return new RegExp(url
+      .toString()
+      .toLowerCase()
+      .replace(/(é|è|ë|ê)/g, 'e')
+      .replace(/(à|ã|ä|â)/g, 'a')
+      .replace(/(î|ï)/g, 'i')
+      .replace(/(ò|ö|ô)/g, 'o')
+      .replace(/(,|\.|\?|\!)/g, '')
+      .replace(/(u|ü|ù)/g, 'u')
+      .replace(/ç/g, 'c')
+      .replace(/s/g, '-')).test(this.currentPath);
   }
 
 
@@ -101,6 +124,9 @@ export class SidebarComponent implements OnInit {
 
   get menuList(): {} {
     return this._menuList;
+  }
+  get typeMenu(): string {
+    return this._typeMenu;
   }
 
 /* get back(): { link: string; title: string } {
@@ -112,7 +138,17 @@ export class SidebarComponent implements OnInit {
    * @param url
    */
   public goTo(url) {
-    this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`]);
+    this._router.navigate([`${(/^\//.test(url) ? url : '/' + url)
+      .toString()
+      .toLowerCase()
+      .replace(/(é|è|ë|ê)/g, 'e')
+      .replace(/(à|ã|ä|â)/g, 'a')
+      .replace(/(î|ï)/g, 'i')
+      .replace(/(ò|ö|ô)/g, 'o')
+      .replace(/(u|ü|ù)/g, 'u')
+      .replace(/ç/g, 'c')
+      .replace(/(,|\.|\?|\!)/g, '')
+      .replace(/\s/g, '-')}`]);
   }
 
 }

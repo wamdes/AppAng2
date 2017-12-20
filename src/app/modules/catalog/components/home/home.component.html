@@ -7,13 +7,17 @@
 	<app-sidebar
     [hidden]="!this.categorie.menuList"
 		[menuList]="this.categorie.menuList"
+    [typeMenu]="'catalogue'"
   ></app-sidebar>
 
-		</div>
-		<div class="col-sm-8" *ngIf="!!items">
-      <app-card *ngFor="let model of items"
-                [model]="model"></app-card>
 </div>
+
+
+      <div class="col-sm-8">
+      <router-outlet></router-outlet>
+      <!--app-card *ngFor="let model of items"
+                [model]="model"></app-card-->
+      </div>
     </div>
 	</article>
 </section>

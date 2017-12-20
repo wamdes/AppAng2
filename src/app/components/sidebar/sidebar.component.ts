@@ -114,7 +114,7 @@ export class SidebarComponent implements OnInit {
       .replace(/(,|\.|\?|\!)/g, '')
       .replace(/(u|ü|ù)/g, 'u')
       .replace(/ç/g, 'c')
-      .replace(/s/g, '-')).test(this.currentPath);
+      .replace(/\s/g, '-')).test(this.currentPath);
   }
 
 

@@ -3,9 +3,9 @@
     <nav class="sidebar-omenu">
       <ul>
         <li *ngFor="let menu of menuList?.listNiv1"
-            [class.active]="checkActive(type + '/'+ menu )">
+            [class.active]="checkActive(typeMenu + '/'+ menu )">
 
-          <a (click)="goTo(type + '/'+ menu );"
+          <a (click)="goTo(typeMenu + '/'+ menu );"
              class="sidebar-menu">
             <h2 [innerHTML]="menu"
                 [style.color]="colorMenu(menu)"></h2>

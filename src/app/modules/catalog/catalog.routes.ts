@@ -26,9 +26,9 @@ const catalogRoutesParams: Routes = [
     path: ':menu',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'overview', pathMatch: 'full' },
-      { path: ':submenu', component: HomeComponent },
-      { path: ':submenu/details/:id', component: HomeComponent },
+      { path: '', component: FerroviaireComponent },
+      { path: ':submenu', component: FerroviaireComponent },
+      { path: ':submenu/details/:id', component: FerroviaireComponent },
     ]
   }
   ];

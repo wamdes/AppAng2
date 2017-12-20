@@ -64,19 +64,19 @@ export class SidebarComponent implements OnInit {
     let color = 'rgba(0,0,0,1)';
     switch (title.toString().toUpperCase().replace(/\s/g, ''))
     {
-      case 'FERROVIAIRE' :
+      case 'SERVICESFERROVIAIRES' :
         color = '#009aa6';
         break;
-      case 'BUREAUTIQUE' :
-        color = '#9e005d';
+      case 'SERVICESBUREAUTIQUES' :
+        color = '#E05206';
         break;
-      case 'EQUIPEMENTINFORMATIQUE' :
+      case 'EQUIPEMENTSINFORMATIQUES' :
         color = '#d52128';
         break;
-      case 'FONCTIONSUPPORT' :
+      case 'FONCTIONSSUPPORT' :
         color = '#82be00';
         break;
-      case 'TELEPHONIE' :
+      case 'ABONNEMENTS' :
         color = '#9e005d';
         break;
       case 'SECURITE' :

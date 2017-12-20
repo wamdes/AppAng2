@@ -2,24 +2,24 @@
 
     <nav>
       <ul>
-        <li *ngFor="let menu of menuList"
+        <li *ngFor="let menu of menuList.listNiv1"
             [class.active]="checkActive(currentPath)">
           <a (click)="goTo(menu.link);"
              class="sidebar-menu">
-            <h2 [innerHTML]="menu.title.toUpperCase()"
+            <h2 [innerHTML]="menu"
                 [style.color]="menu.color"></h2>
             <img src="{{menu.arrow}}">
           </a>
           <p *ngIf="menu.description" [innerHTML]="menu.description"></p>
           <ul>
 
-            <li *ngFor="let submenu of menu.subtitles"
+            <li *ngFor="let submenu of menuList.listNv2[menu]"
                 [class.active]="checkActive(submenu.link)"
-                (mouseover)="background-color">
+                >
 
               <a (click)="goTo(submenu.link);"
                  class="sidebar-submenu">
-                <p [innerHTML]="submenu.title.toUpperCase()"></p>
+                <p [innerHTML]="submenu.toUpperCase()"></p>
               </a>
               <p *ngIf="submenu.description"
                  [innerHTML]="submenu.description"></p>
@@ -31,8 +31,8 @@
 
       </ul>
     </nav>
-    <aside>
+    <!--aside>
       <h2 [innerHTML]="quickView.title"></h2>
       <p [innerHTML]="quickView.description"></p>
-    </aside>
+    </aside-->
 </section>

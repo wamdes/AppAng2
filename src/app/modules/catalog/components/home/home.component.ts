@@ -18,9 +18,7 @@ export class HomeComponent implements OnInit {
   constructor( private categorie: CategoriesService) { }
 
   ngOnInit() {
-    this.menuList = this.categorie.menuList
-    //console.log(this.categorie.categorie);
-    //console.log(this.categorie.menuList);
+    this.menuList = this.categorie.menuList;
   }
 
 }

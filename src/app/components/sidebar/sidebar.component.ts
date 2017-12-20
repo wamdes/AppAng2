@@ -15,12 +15,13 @@ export class SidebarComponent implements OnInit {
   private _menuList: MenuList;
   private _back: Back;
   private _quickView: QuickView;
+  public listMenuFix = [];
 
   /*@Input('back') set back(value: { link: string; title: string }) {
     this._back = value;
   }*/
 
-  public currentPath: string;
+  public currentPath: undefined|string = document.location.pathname;
   @Input('menuList') set menuList(arrayValue) {
     this._menuList = arrayValue;
 
@@ -33,11 +34,43 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
 
-  this._router.events.subscribe((nav: NavigationEnd) =>{
+  this._router.events
+    .filter(nav => nav instanceof NavigationEnd)
+    .subscribe((nav: NavigationEnd) =>{
       console.log('route::', nav);
 
       this.currentPath = nav.urlAfterRedirects;
     });
+  }
+
+  colorMenu(title) {
+    let color = 'rgba(0,0,0,1)';
+    switch (title.toString().toUpperCase().replace(/\s/g, ''))
+    {
+      case 'FERROVIAIRE' :
+        color = '#009aa6';
+        break;
+      case 'BUREAUTIQUE' :
+        color = '#9e005d';
+        break;
+      case 'EQUIPEMENTINFORMATIQUE' :
+        color = '#d52128';
+        break;
+      case 'FONCTIONSUPPORT' :
+        color = '#82be00';
+        break;
+      case 'TELEPHONIE' :
+        color = '#9e005d';
+        break;
+      case 'SECURITE' :
+        color = '#e05206';
+        break;
+    }
+    return color;
+  }
+
+  arrowMenu(title) {
+    return `/assets/img/${title.toString().toLowerCase().replace(/\s/g, '')}-arrow.png`;
   }
 
   checkActive(url) {

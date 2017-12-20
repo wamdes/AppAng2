@@ -33,8 +33,6 @@ export class ConnectionBackofficeService {
     return headers;
   }
 
-
-
   /**
    * Get List Forms
    * @param data
@@ -54,7 +52,6 @@ export class ConnectionBackofficeService {
    * @return {any|{}}
    */
   private extractData(res: Response) {
-    console.log(Response);
     return  res.json() || {};
   }
 

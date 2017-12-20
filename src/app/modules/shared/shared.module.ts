@@ -22,7 +22,7 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { TooltipComponent } from '../../components/tooltip/tooltip.component';
 import { PopinComponent } from '../../components/popin/popin.component';
 import {ConnectionBackofficeService} from '../../common/services/connection-backoffice.service';
-import {CategoriesService} from "../../common/services/categories.service";
+import {CategoriesService} from '../../common/services/categories.service';
 
 @NgModule({
   declarations: [

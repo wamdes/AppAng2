@@ -11,7 +11,7 @@ export class CategoriesService {
   constructor(private linkBO: ConnectionBackofficeService) {
     this.linkBO.getMenuListForms().subscribe(
       success => {
-        this.categorie = success.catalogue.services.reduce((final,current) => {
+        this.categorie = success.catalogue.services.reduce(( final, current ) => {
             let { Categorie, SubCategorie } = current;
             if (!final[Categorie]) final[Categorie] = {};
             if (!final[Categorie][SubCategorie]) final[Categorie][SubCategorie] = [];

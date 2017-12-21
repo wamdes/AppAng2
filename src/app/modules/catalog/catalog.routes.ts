@@ -5,7 +5,7 @@ import {Routes, RouterModule} from '@angular/router';
  * components
  */
 import {HomeComponent} from './components/home/home.component';
-import {FerroviaireComponent} from './components/ferroviaire/ferroviaire.component';
+import { MenuComponent} from './components/menu/menu.component';
 import {BureautiqueComponent} from './components/bureautique/bureautique.component';
 import {SupportComponent} from './components/support/support.component';
 import {EquipementComponent} from './components/equipement/equipement.component';
@@ -26,9 +26,9 @@ const catalogRoutesParams: Routes = [
     path: ':menu',
     component: HomeComponent,
     children: [
-      { path: '', component: FerroviaireComponent },
-      { path: ':submenu', component: FerroviaireComponent },
-      { path: ':submenu/details/:id', component: FerroviaireComponent },
+      { path: '', component: MenuComponent },
+      { path: ':submenu', component: MenuComponent },
+      { path: ':submenu/details/:id', component: MenuComponent },
     ]
   }
   ];

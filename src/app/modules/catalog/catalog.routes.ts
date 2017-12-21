@@ -27,6 +27,7 @@ const catalogRoutesParams: Routes = [
       { path: '', component: MenuComponent },
       { path: ':submenu', component: SubmenuComponent },
       { path: ':submenu/details/:id', component: DetailsComponent },
+      
     ]
   }
   ];

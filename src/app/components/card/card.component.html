@@ -42,8 +42,13 @@
           >
             <h3 [innerHTML]="item.title"></h3>
             <p [innerHTML]="item.description"></p>
-            <button class="add"
+            <!--button class="add"
                     (click)="pushStore(item)"
+                    [innerHTML]="'add panier'"
+
+            ></button-->
+            <button class="add"
+                    (click)="goTo('/checkout/form')"
                     [innerHTML]="'add panier'"
 
             ></button>

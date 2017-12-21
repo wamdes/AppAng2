@@ -1,6 +1,7 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {PanierComponent} from './components/panier.component';
+import {FormComponent} from './components/form/form.component';
 
 /**
  * routes modules
@@ -9,7 +10,11 @@ import {PanierComponent} from './components/panier.component';
 const cartRoutesParams: Routes = [
   {
     path: '',
-    component: PanierComponent
+    component:PanierComponent
+  },
+  {
+    path: 'form',
+    component: FormComponent
   }
 ];
 /**

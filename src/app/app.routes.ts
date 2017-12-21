@@ -18,7 +18,7 @@ const routesParams: Routes = [
     loadChildren: 'app/modules/account/account.module#AccountModule'
   },
   {
-    path: 'panier',
+    path: 'checkout',
     loadChildren: 'app/modules/cart/cart.module#CartModule'
   },
   {

@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
     {
       title: 'FERROVIAIRE',
       description: 'test',
-      image: 'url("assets/img/menu@2x.png")',
+      image: 'url("assets/img/ferroviaire@2x.png")',
       show: false,
       items: [
         {

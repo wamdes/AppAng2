@@ -1,3 +1,55 @@
-<p>
-  submenu works!
-</p>
+<ul class="bloc_categorie row">
+
+  <li *ngFor="let item of items" class="col-sm-4 col-xs-6"
+      [style.backgroundImage]="item.image"
+      draggable="true"
+      (dragstart)="stores.drag($event, item)">
+<!-- test -->
+        <aside class="libelle row">
+          <h3 [innerHTML]="item.title"></h3>
+          <p [innerHTML]="item.description"></p>
+
+          <button class="add"
+                  (click)="goTo('/checkout/form')"
+                  [innerHTML]="'add panier'"
+          ></button>
+          <button class="info"
+                  (click)="goTo(document.location.pathname + '/details/' + item.title)"
+                  [innerHTML]="'i'"
+          ></button>
+        </aside>
+    <!-- test -->
+  </li>
+
+</ul>
+<p>1</p>
+
+
+
+
+<ul class="bloc_categorie_slideshow row">
+
+  <li *ngFor="let item of items" class="col-sm-4 col-xs-6"
+      [style.backgroundImage]="item.image"
+      draggable="true"
+      (dragstart)="stores.drag($event, item)">
+
+    <aside class="libelle row">
+      <h3 [innerHTML]="item.title"></h3>
+      <p [innerHTML]="item.description"></p>
+      <h3 [innerHTML]="item.title"></h3>
+      <p [innerHTML]="item.description"></p>
+
+      <button class="add"
+              (click)="store.tmpItem(item)"
+              [innerHTML]="'add panier'"
+      ></button>
+      <button class="info"
+              (click)="goTo(document.location.pathname + '/details/' + item.title)"
+              [innerHTML]="'i'"
+      ></button>
+    </aside>
+
+  </li>
+</ul>
+<p>1</p>

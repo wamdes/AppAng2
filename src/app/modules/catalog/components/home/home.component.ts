@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import { MenuList } from '../../../../common/interfaces/menu-list';
 import { CategoriesService } from '../../../../common/services/categories.service';
 import {ActivatedRoute, Router} from "@angular/router";
+import {StoreService} from "../../../../common/services/store.service";
 
 
 
@@ -15,14 +16,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   public items: MenuList[];
   public quickView: MenuList;
   private paramsRouter;
+  public popin = null;
 
   constructor(
+    public store : StoreService,
     public categorie: CategoriesService,
     private route: ActivatedRoute) { }
     private _showCat: undefined|boolean = false;
 
   ngOnInit() {
-
+    this.popin = this.store.popin;
     this.quickView = {
       title: 'quickView',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat,' +

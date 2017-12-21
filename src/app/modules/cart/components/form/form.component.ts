@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StoreService} from "../../../../common/services/store.service";
 
 @Component({
   selector: 'app-form',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(public store: StoreService) { }
 
   ngOnInit() {
   }

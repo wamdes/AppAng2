@@ -1,0 +1,47 @@
+
+
+  <ul class="bloc_categorie">
+
+
+    <li *ngFor="let item of model.items" class="col-sm-2 col-xs-6"
+        [style.backgroundImage]="item.image">
+      <div class="close"
+           (click)="model.show = !(model.show)"
+      >
+      <div *ngIf="item.link">
+        <aside class="libelle row"
+        >
+          <h3 [innerHTML]="item.title"></h3>
+          <p [innerHTML]="item.description"></p>
+          <button class="add"
+                  (click)="goTo(model.link)"
+                  [innerHTML]="item.link"
+          ></button>
+          <button class="add"
+                  (click)="goTo(model.link)"
+                  [innerHTML]="Detail"
+          ></button>
+        </aside>
+        </div>
+        <div *ngIf="!item.link">
+          <aside class="libelle"
+                 draggable="true"
+                 (dragstart)="stores.drag($event, item)"
+          >
+            <h3 [innerHTML]="item.title"></h3>
+            <p [innerHTML]="item.description"></p>
+            <!--button class="add"
+                    (click)="pushStore(item)"
+                    [innerHTML]="'add panier'"
+
+            ></button-->
+            <button class="add"
+                    (click)="goTo('/checkout/form')"
+                    [innerHTML]="'add panier'"
+
+            ></button>
+          </aside>
+        </div>
+      </div>
+      </li>
+  </ul>

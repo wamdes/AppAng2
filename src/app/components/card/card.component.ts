@@ -29,8 +29,9 @@ export class CardComponent implements OnInit {
   get model(){
     return this._model;
   }
-  public goTo(url) {
-    this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`])
+  public goTo(title) {
+    let url = document.location.pathname + '/' + title;
+    this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`]);
   }
 
 }

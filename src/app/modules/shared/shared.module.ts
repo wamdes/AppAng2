@@ -23,7 +23,7 @@ import { TooltipComponent } from '../../components/tooltip/tooltip.component';
 import { PopinComponent } from '../../components/popin/popin.component';
 import {ConnectionBackofficeService} from '../../common/services/connection-backoffice.service';
 import {CategoriesService} from '../../common/services/categories.service';
-import {FilarianeComponent} from "../../components/filariane/filariane.component";
+import {FilarianeComponent} from '../../components/filariane/filariane.component';
 
 @NgModule({
   declarations: [

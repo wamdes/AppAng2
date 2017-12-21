@@ -2,7 +2,6 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import { MenuList } from '../../../../common/interfaces/menu-list';
 import { CategoriesService } from '../../../../common/services/categories.service';
 import {ActivatedRoute, Router} from "@angular/router";
-import {SlideService} from 'ng2-slides';
 
 
 

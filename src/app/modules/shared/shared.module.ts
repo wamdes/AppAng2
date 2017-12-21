@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
  * Common services dependencies
  */
 import { StoreService } from '../../common/services/store.service';
+import { SlidesModule } from 'ng2-slides';
 
 
 /**

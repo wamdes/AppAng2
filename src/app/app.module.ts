@@ -39,7 +39,7 @@ import {CartComponent} from "./components/cart/cart.component";
     FormsModule,
     HttpModule,
     ROUTES,
-    SharedModule.forRoot(),
+    SharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppRootComponent]

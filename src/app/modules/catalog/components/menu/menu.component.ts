@@ -45,7 +45,6 @@ export class MenuComponent implements OnInit {
     });
 
     return this.categories.menuList.listNv2[cat].map(title => {
-      console.log(this.categories.categorie[cat][title]);
       return {
         title: title,
         image: `url("assets/img/${title.toString()
@@ -58,7 +57,7 @@ export class MenuComponent implements OnInit {
           .replace(/ç/g, 'c')
           .replace(/(,|\.|\?|\!)/g, '')
           .replace(/\s/g, '-')}@2x.png")`,
-        description: this.categories.categorie[cat][title].prerequis
+        description: this.categories.categorie[cat][title][0].prerequis
       };
     });
   }

@@ -1,0 +1,17 @@
+<section>
+  <div>
+    <figure>
+      <img src="diapos.contents[count].img">
+      <aside>
+        <p [innerHTML]="diapos.contents[count].desc"></p>
+        <nav>
+          <ul>
+            <li *ngFor="let num of diapos.num"
+                [class.active]="count === num"
+                [innerHTML]="num"></li>
+          </ul>
+        </nav>
+      </aside>
+    </figure>
+  </div>
+</section>

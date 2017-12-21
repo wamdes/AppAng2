@@ -14,10 +14,14 @@
 
 
       <div class="col-sm-8">
-        <app-filariane></app-filariane>
-      <router-outlet></router-outlet>
-      <!--app-card *ngFor="let model of items"
-                [model]="model"></app-card-->
+        <section *ngIf="!showCat">
+          <app-filariane></app-filariane>
+          <router-outlet></router-outlet>
+        </section>
+        <section *ngIf="showCat">
+          <app-slideshow></app-slideshow>
+          <app-catshow></app-catshow>
+        </section>
       </div>
     </div>
 	</article>

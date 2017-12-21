@@ -57,7 +57,6 @@ export class SidebarComponent implements OnInit {
   this._router.events
     .filter(nav => nav instanceof NavigationEnd)
     .subscribe((nav: NavigationEnd) =>{
-      console.log('route::', nav);
 
       this.currentPath = nav.urlAfterRedirects;
     });

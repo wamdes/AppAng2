@@ -12,7 +12,9 @@
             <img [src]="arrowMenu(menu)">
           </a>
 
-          <ul class="sidebar-isubmenu">
+          <ul class="sidebar-isubmenu"
+              *ngIf="checkActive(typeMenu + '/'+ menu )"
+          >
             <li *ngFor="let submenu of menuList?.listNv2[menu]"
                 [class.active]="checkActive(typeMenu + '/'+ menu + '/' + submenu)"
                 >

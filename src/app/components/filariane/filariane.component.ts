@@ -21,7 +21,7 @@ export class FilarianeComponent implements OnInit {
   colorMenu() {
     let color = 'rgba(0,0,0,1)';
     if(!(this.currentPath.length > 0)) return color;
-    switch ((this.currentPath[1]||this.currentPath[0]).toString().toUpperCase().replace(/\s/g, ''))
+    switch ((this.currentPath[1]||this.currentPath[0]).toString().toUpperCase().replace(/-/g, ''))
     {
       case 'SERVICESFERROVIAIRES' :
         color = '#009aa6';
@@ -46,10 +46,15 @@ export class FilarianeComponent implements OnInit {
   }
 
   public goTo(info) {
+    console.log(this.currentPath.reduce((final, curent) => {
+      if(!final.bfind) final.path += '/' + curent;
+      if(curent === info) final.bfind = true;
+      return final;
+    }, {bfind: false, path: ''} ).path);
     this._router.navigate([`${
       this.currentPath.reduce((final, curent) => {
+        if(!final.bfind) final.path += '/' + curent;
         if(curent === info) final.bfind = true;
-        if(!final.bfind) final.path = '/' + curent;
         return final;
       }, {bfind: false, path: ''} ).path
       }`]);

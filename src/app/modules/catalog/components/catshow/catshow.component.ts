@@ -18,7 +18,16 @@ export class CatshowComponent implements OnInit {
       return this.categories.menuList.listNiv1.map(title => {
         return {
           title: title,
-          image: `url("assets/img/${title}@2x.png")`
+          image: `url("assets/img/${title.toString()
+            .toLowerCase()
+            .replace(/(é|è|ë|ê)/g, 'e')
+            .replace(/(à|ã|ä|â)/g, 'a')
+            .replace(/(î|ï)/g, 'i')
+            .replace(/(ò|ö|ô)/g, 'o')
+            .replace(/(u|ü|ù)/g, 'u')
+            .replace(/ç/g, 'c')
+            .replace(/(,|\.|\?|\!)/g, '')
+            .replace(/\s/g, '-')}@2x.png")`
         };
       });
     }

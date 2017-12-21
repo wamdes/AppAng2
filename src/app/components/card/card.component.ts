@@ -30,7 +30,16 @@ export class CardComponent implements OnInit {
     return this._model;
   }
   public goTo(title) {
-    let url = document.location.pathname + '/' + title;
+    let url = document.location.pathname + '/' + title.toString()
+      .toLowerCase()
+      .replace(/(é|è|ë|ê)/g, 'e')
+      .replace(/(à|ã|ä|â)/g, 'a')
+      .replace(/(î|ï)/g, 'i')
+      .replace(/(ò|ö|ô)/g, 'o')
+      .replace(/(u|ü|ù)/g, 'u')
+      .replace(/ç/g, 'c')
+      .replace(/(,|\.|\?|\!)/g, '')
+      .replace(/\s/g, '-');
     this._router.navigate([`${/^\//.test(url) ? url : '/' + url}`]);
   }
 

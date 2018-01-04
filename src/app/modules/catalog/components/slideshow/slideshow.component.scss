@@ -1,7 +1,9 @@
+
 figure {
   overflow:  hidden;
-  height: 114px;
-  width: auto;
+  height: 295px;
+  width: 100%;
+margin-top:20px;
 }
 
 img {
@@ -11,8 +13,21 @@ img {
 aside{
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
-  width: 188px;
-  background: red;
+  width: 30%;
+  height:295px;
+  background: #fff;
+  opacity:.7;
+
+  h2{margin-left:20px}
+  nav{
+    margin-top:175px;
+    font-size:18px;
+
+    ul{
+
+      li{display:inline-block;margin-right:10px;color: rgb(158, 0, 93);font-weight:600}
+    }
+  }
 }

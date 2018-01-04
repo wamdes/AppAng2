@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public items: MenuList[];
   public quickView: MenuList;
   private paramsRouter;
-  public popin = null;
+  //public popin = null;
 
   constructor(
     public store : StoreService,
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private _showCat: undefined|boolean = false;
 
   ngOnInit() {
-    this.popin = this.store.popin;
+    //this.popin = this.store.popin;
     this.quickView = {
       title: 'quickView',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat,' +

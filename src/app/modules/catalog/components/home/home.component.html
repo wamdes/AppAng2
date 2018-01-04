@@ -7,13 +7,14 @@
 	<app-sidebar
     [hidden]="!this.categorie.menuList"
 		[menuList]="this.categorie.menuList"
+		[quickView]="this.quickView"
     [typeMenu]="'catalogue'"
   ></app-sidebar>
 
 </div>
 
 
-      <div class="col-sm-8">
+      <div class="col-sm-9">
         <section *ngIf="!showCat">
           <app-filariane></app-filariane>
           <router-outlet></router-outlet>
@@ -21,12 +22,39 @@
         <section *ngIf="showCat">
           <app-slideshow></app-slideshow>
           <app-catshow></app-catshow>
+
+					<section class="tab col-sm-12 col-xs-12">
+					  <h2>MES DEMANDES DE <span class="purple">SERVICES SI</span></h2>
+					  <table cellspacing="0" cellpadding="0">
+					    <thead>
+					        <tr>
+					          <th>N° DE DEMANDE</th>
+					          <th>SERVICE DEMANDE</th>
+					          <th>NATURE DU SERVICE</th>
+										<th>ACTION</th>
+					          <th>DATE</th>
+										<th>STATUT</th>
+
+					        </tr>
+					      </thead>
+					      <tbody>
+					        <tr>
+					          <td>INC 9918</td>
+					          <td>Apollo</td>
+					          <td >Ferroviaire</td>
+					          <td>Modification</td>
+					          <td>01/09/2017</td>
+										<td>EN COURS</td>
+					        </tr>
+					      </tbody>
+					  </table>
+					</section>
+
         </section>
       </div>
     </div>
 	</article>
 </section>
-
 <app-popin
   [(open)]="popin"
   [addClassGlobal]="'pop-panier'"

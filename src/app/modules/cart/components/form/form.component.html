@@ -1,33 +1,63 @@
-<section class="col-sm-12 col-xs-12">
-  <h3>title du produit</h3>
-  <span class="libelle">Bénéficiaire de la demande</span>
-  <select>
-    <option>Pour mon compte</option>
-  </select>
-  <span class="libelle">Date de fin d'utilisation</span>
-  <select>
-    <option>jj/MM/AAAA</option>
-  </select>
-  <span class="libelle">Justifiez votre besoin</span>
-  <textarea></textarea>
+<div class="container">
+<app-filariane></app-filariane>
+<h3 class="col-sm-8 col-sm-offset-2 col-xs-12">title du produit</h3>
+<section class="col-sm-8 col-sm-offset-2 col-xs-12">
+
+
+
+  <div class="row">
+    <span class="libelle">Bénéficiaire de la demande</span>
+    <select>
+      <option>Pour mon compte</option>
+    </select>
+  </div>
+  <div class="row">
+    <span class="libelle">Date de fin d'utilisation</span>
+    <select>
+      <option>jj/MM/AAAA</option>
+    </select>
+  </div>
+  <div class="row">
+    <span class="libelle">Justifiez votre besoin</span>
+    <textarea></textarea>
+  </div>
+<div class="row">
   <span class="libelle">Numéro d'UC du poste de travail</span>
   <input type="text"/>
+</div>
+<div class="row">
   <span class="libelle">Commentaire</span>
   <textarea></textarea>
+</div>
+<div class="row">
   <span class="libelle">Code RG*</span>
   <input type="text"/>
-  <span class="mini">Si vous ne connaissez pasvotre code RG, merci de vous rapprocher du responsable de commande de votre division</span>
+</div>
+  <span class="mini">Si vous ne connaissez pas votre code RG, merci de vous rapprocher du responsable de commande de votre division</span>
 </section>
-<aside>
-  <span class="libelle"><img src="/assets/img/picto-user-purple.png">CORRESPONDANT INFORMATIQUE</span>
-  <select>
+<aside class="col-sm-6 col-xs-12 col-sm-offset-4">
+  <div class="row">
+  <span class="libelle col-sm-7 col-xs-12"><img src="/assets/img/picto-user-purple.png">CORRESPONDANT INFORMATIQUE</span>
+  <select class="col-sm-5 col-xs-12">
     <option disabled>Choisir un correspondant informatique</option>
   </select>
-  <span class="libelle"><img src="/assets/img/picto-user-purple.png">RESPONSABLE HIERARCHIQUE</span>
-  <input type="text"/>
-  <span class="libelle"><img src="/assets/img/picto-user-purple.png">DEMANDEUR  {{id.user}}</span>
+</div>
+<div class="row">
+  <span class="libelle col-sm-7 col-xs-12"><img src="/assets/img/picto-user-purple.png">RESPONSABLE HIERARCHIQUE</span>
+  <input class="col-sm-5 col-xs-12" type="text"/>
+</div>
+<div class="row">
+  <span class="libelle col-sm-5 col-xs-12"><img src="/assets/img/picto-user-purple.png">DEMANDEUR</span>
+</div>
 </aside>
-<section>
-  <button (click)="store.deleteTmp()">Annuler</button>
-  <button (click)="store.validate()">Valider</button>
+<section class="bt col-sm-10 col-xs-12">
+  <ul>
+    <li>
+  <button class="del" (click)="store.deleteTmp()">Annuler</button>
+</li>
+<li>
+  <button class="valid" (click)="store.validate()">Valider</button>
+</li>
+</ul>
 </section>
+<div>

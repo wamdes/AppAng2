@@ -1,9 +1,9 @@
 <section>
-  <div>
-    <figure>
-      <img src="diapos.contents[count].img">
+  <div class="slideshow">
+    <figure >
+      <img [src]="diapos.contents[count].img">
       <aside>
-        <p [innerHTML]="diapos.contents[count].desc"></p>
+        <h2 [innerHTML]="diapos.contents[count].desc"></h2>
         <nav>
           <ul>
             <li *ngFor="let num of diapos.num"

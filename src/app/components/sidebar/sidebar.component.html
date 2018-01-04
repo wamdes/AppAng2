@@ -20,7 +20,7 @@
                 >
 
               <a (click)="goTo(typeMenu + '/'+ menu + '/' + submenu);"
-                 class="sidebar-submenu">
+                 class="sidebar-submenu" >
                 <p [innerHTML]="submenu"></p>
               </a>
               <p *ngIf="submenu?.description"
@@ -42,7 +42,7 @@
              class="sidebar-menu">
             <h2 [innerHTML]="menufix?.title"
                 [style.color]="colorMenu(menufix)"></h2>
-            <img [src]="arrowMenu(menufix)">
+            <img [src]="arrowMenu(menufix.title)">
           </a>
         </li>
       </ul>

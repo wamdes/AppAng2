@@ -17,15 +17,15 @@ export class SidebarComponent implements OnInit {
   private _quickView: QuickView;
   public listMenuFix = [
     {
-      link: '',
+      link: 'b',
       title: 'demande de mouvement DE personnel'
     },
     {
-      link: '',
+      link: 'b',
       title: 'demande de reclamation'
     },
     {
-      link: '',
+      link: 'b',
       title: 'demande hors catalogue'
     }
   ];
@@ -63,7 +63,7 @@ export class SidebarComponent implements OnInit {
   }
 
   colorMenu(title) {
-    let color = 'rgba(0,0,0,1)';
+    let color = '#9e005d';
     switch (title.toString().toUpperCase().replace(/\s/g, ''))
     {
       case 'SERVICESFERROVIAIRES' :
@@ -80,9 +80,6 @@ export class SidebarComponent implements OnInit {
         break;
       case 'ABONNEMENTS' :
         color = '#9e005d';
-        break;
-      case 'SECURITE' :
-        color = '#e05206';
         break;
     }
     return color;

@@ -38,7 +38,7 @@ export class StoreService {
 
   set tmpItem(value) {
     this._tmpItem = value;
-    this._router.navigate(['/checkout/form']);
+    //this._router.navigate(['/checkout/form']);
   }
   validate() {
     this.store = this.tmpItem;

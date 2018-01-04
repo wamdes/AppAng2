@@ -8,7 +8,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 export class SlideshowComponent implements OnInit, OnDestroy {
   count;
   public diapos = {
-    contents : [{img: '', desc: 'lalala1'}, {img: '', desc: 'lalala2'}, {img: '', desc: 'lalala3'}, {img: '', desc: 'lalala4'}],
+    contents : [{img: '/assets/img/slideshow-mobile-01.jpg', desc: 'lalala1'}, {img: '/assets/img/slideshow-mobile-02.jpg', desc: 'lalala2'}, {img: '/assets/img/slideshow-mobile-03.jpg', desc: 'lalala3'}, {img: '/assets/img/slideshow-mobile-04.jpg', desc: 'lalala4'}],
     num:[ 1, 2, 3, 4]
   };
 

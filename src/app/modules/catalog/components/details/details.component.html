@@ -1,3 +1,88 @@
-<p>
-  details works!
-</p>
+<div class="row">
+<section class="col-sm-8 col-xs-12 col-sm-offset-2">
+    <h2 class="purple">ACCEDER AU REFERENTIEL FOURNISSEURS SNCF</h2>
+    <h2>{{service.Nom}}</h2>
+    <div class="row">
+      <div class="col-sm-11 col-xs-12">
+      <div class="bloc">
+        <div class="title-purple">
+          Description du service :
+        </div>
+        <div class="text"
+        [innerHTML]="service.objet" >
+        </div>
+        <div class="text"
+        [innerHTML]="service.contenu" >
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+
+          <div class="bloc">
+            <div class="title-purple">
+              Acteurs concernés :
+            </div>
+            <div class="text">
+              PUBLIC CIBLE : {{service.publiccible}}
+            </div>
+          </div>
+          <div class="bloc">
+            <div class="title-purple">
+              Documentation et Formation : :
+            </div>
+            <div class="text">
+              Le guide utilisateur est disponible à l’adresse suivant :
+
+                http://ged.SNCFRéseau.fr/livelink/llisapi.dll?func=ll&objld=9190046&objAction=Open
+                SNCF Réseau ne dispense pas de formation
+                dédiée pour ce service.
+            </div>
+          </div>
+          <div class="bloc">
+            <div class="title-purple">
+              Modalités d’accès :
+            </div>
+            <div class="text"
+              [innerHTML]="service.prerequis">
+            </div>
+          </div>
+            <div class="bloc">
+              <div class="title-purple">
+                Tarifs :
+              </div>
+              <div class="text">
+                coût d’utilisation : - euros
+              </div>
+          </div>
+
+      </div>
+
+
+      <div class="col-sm-5 col-xs-12">
+
+          <div class="bloc">
+            <div class="title-orange">
+              Support :
+            </div>
+            <div class="text">
+              {{service.support}}
+            </div>
+          </div>
+          <div class="bloc">
+            <div class="title-blue">
+              Ouverture de service :
+            </div>
+            <div class="text">
+              Le service est ouvert 24H/24H <br>
+              et 7J/7J, hors jours fériés.
+            </div>
+          </div>
+        </div>
+
+</div>
+
+
+  </section>
+</div>

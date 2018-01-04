@@ -14,9 +14,9 @@
         <ng-content select=".tpl-popin-title"></ng-content>
       </p>
       <div [hidden]="!iconClose"
-           (click)="close()"
+            (click)="close()"
            class="col-xs-2 cursor-pointer">
-        <figure class="icon-close mrg-px-l-4 mrg-px-r-4 mrg-px-t-4"></figure>
+        <img class="d-inline-block" src="{{'/assets/img/close.svg'}}">
       </div>
     </header>
 

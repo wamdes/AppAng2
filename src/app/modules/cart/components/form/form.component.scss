@@ -1,0 +1,17 @@
+input, textarea, select{width:100%;background-color:#d8d8d8}
+textarea{min-height:80px}
+.libelle{color:#9e005d;font-weight:600;}
+
+aside>div>select, aside>div>input{width:40%; padding-top: 10px;}
+section{clear: both;
+    border: 1px solid #d8d8d8;
+
+    margin-bottom: 20px;
+    }
+section>.row{padding: 10px 40px;}
+button{width:249px;height:61px;color:#fff;font-weight:600;background-color:transparent;border:none}
+.del{background-image:url("/assets/img/bt-rose.png");font-size:18px;text-transform:uppercase;float:right}
+.valid{background-image:url("/assets/img/bt-blue.png");font-size:18px;text-transform:uppercase;float:right}
+.bt{border:none;padding:0}
+section>ul>li{display:inline-block;margin:20px;float:right;}
+h3{background-color:#9e005d;margin-top:20px;margin-bottom:0px;color:#fff;padding:5px}

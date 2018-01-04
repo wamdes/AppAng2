@@ -19,7 +19,7 @@
         a{
           img{transition: all .5s ease-in-out;
         }
-        ul{display:none;transition: all 1s ease-in-out;}
+        ul{height:0;transition: all 1s ease-in-out;}
       }
         &.active{
           a{
@@ -28,7 +28,7 @@
               transform:rotate(-90deg);
             }
           }
-          ul{display:block;transition: all 1s ease-in-out;}
+          ul{transition: all 1s ease-in-out;height:auto;}
         }
       }
     }
@@ -49,7 +49,7 @@
     h2{
       text-transform:uppercase;
       font-weight: 600;
-      text-align: justify;
+      text-align: left;
       vertical-align: middle;
       font-family: Avenir;
       margin: 0;

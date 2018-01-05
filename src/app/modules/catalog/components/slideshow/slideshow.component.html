@@ -3,7 +3,11 @@
     <figure >
       <img [src]="diapos.contents[count].img">
       <aside>
-        <h2 [innerHTML]="diapos.contents[count].desc"></h2>
+        <h2 class="slideshow-title">
+          <span [innerHTML]="diapos.contents[count].title"></span>
+         <br>{{diapos.contents[count].subtitle}}
+        </h2>
+        <p class="slideshow-desc" [innerHTML]="diapos.contents[count].desc"></p>
         <nav>
           <ul>
             <li *ngFor="let num of diapos.num"

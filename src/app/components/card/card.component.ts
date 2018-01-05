@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {StoreService} from '../../common/services/store.service';
 import {Router} from '@angular/router';
 import {Model} from '../../common/interfaces/model';

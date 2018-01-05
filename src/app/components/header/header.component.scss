@@ -8,6 +8,7 @@
      &.row{
        & > .logo {
 
+         padding-top: 8px !important;
          width: 70px;
          height: 53px;
          //background: white;
@@ -17,13 +18,15 @@
          //box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
          text-align: center;
          margin: 0;
-         float:left;
+         //float:left;
          cursor: pointer;
          & > img {
-           height: 85%;
-           display: inline-block;
-           padding-top: 5px;
 
+         }
+         .Group {
+           width: 89px;
+           height: 62px;
+           object-fit: contain;
          }
        }
        margin:0!important
@@ -31,15 +34,30 @@
    }
 
    .title {
-
-     font-family: Avenir;
-     font-size: 18px;
-     font-weight: 900;
-     text-align: left;
-     color: rgb(255, 255, 255);
      margin:0;
-     padding-top: 15px !important;
+     font-family: Avenir;
+     font-size: 34.5px;
+     font-weight: 600;
+     font-style: normal;
+     font-stretch: normal;
+     line-height: normal;
+     letter-spacing: 0.85px;
+     text-align: left;
+     color: #ffffff;
+     padding-top: 33px !important;
+     padding-bottom: 58px !important;
+     & span{
+       display: inline-block;
+       vertical-align: middle;
+     }
 
+   }
+   .home{
+     width: 28px;
+     height: 31px;
+     object-fit: contain;
+     display: inline-block;
+     vertical-align: middle;
    }
    .action{
      white-space: nowrap;
@@ -51,8 +69,15 @@
        display: inline-block;
        vertical-align: middle;
        border-radius: 15px;
+       height: 38px;
+       width: 444px;
        padding: 2px 18px;
-       border: 1px solid rgba(0,0,0, 0.2);
+       border: 2px solid rgba(0, 0, 0, 0.2);
+       background: #FFFFFF;
+       input{
+         width:92%;
+         border: none;
+       }
 
      }
      &-menu{
@@ -72,8 +97,21 @@
            font-size: 12px;
            text-align: center;
            color: rgb(255, 255, 255);
-           .Himg{}
-           .Hlink{}
+           .Himg{
+             width: 34px;
+             height: 42px;
+           }
+           .Hlink{
+             font-family: Avenir;
+             font-size: 25px;
+             font-weight: normal;
+             font-style: normal;
+             font-stretch: normal;
+             line-height: normal;
+             letter-spacing: normal;
+             text-align: center;
+             color: #ffffff;
+           }
          }
        }
      }
@@ -86,23 +124,23 @@
        margin: 0;
 
       &> li {
-         font-family: Avenir;
-         font-weight: 600;
-         font-size: 11px;
-         line-height: 1.64;
-         color: rgb(205, 0, 55);
-         display: inline-block;
-         padding: 0;
-         margin: 0;
-         margin-right: 12px;
+        font-family: Avenir;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.64;
+        color: #cd0037;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        margin-right: 12px;
         margin-top: 12px;
-         list-style: none;
-         width: 156px;
-         background: linear-gradient(to bottom, #F6F6F6 , #F8F8F8);
-         border-radius: 6px 6px 0 0;
-         text-align: center;
-         vertical-align: middle;
-         padding-top:16px;
+        list-style: none;
+        background: linear-gradient(to bottom, #F6F6F6, #F8F8F8);
+        border-radius: 6px 6px 0 0;
+        width: 293px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 16px;
           a{
             text-decoration: none;
             color: inherit;
@@ -123,8 +161,8 @@
      }
   }
    .nd-store{
-     width: 18px;
-     height: 18px;
+     width: 32px;
+     height: 32px;
      border-radius: 50%;
      background: #e6333c;
      text-align: center;
@@ -133,6 +171,7 @@
      color: white;
      display: inline-block;
      margin: -13px 0 0 -11px;
-     box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+     font-size: 20px;
    }
 }

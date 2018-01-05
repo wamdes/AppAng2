@@ -9,34 +9,45 @@
 	          class="logo"
 	          routerLink=""
 	          routerLinkActive="active">
-	    <img src="/assets/img/logo.png">
+      <img src="/assets/img/group.png"
+           srcset="/assets/img/group@2x.png 2x,
+             /assets/img/group@3x.png 3x"
+           class="Group">
 	  </figure>
     <h1 class="col-xs-12 col-sm-4 mrg-pd-0 title"
         routerLink="catSI"
         routerLinkActive="active">
-      <span class="icon"><img src="/assets/img/home_picto.png"></span>
-      CATALOGUE DE SERVICES SI
+      <img src="/assets/img/home.png"
+           srcset="/assets/img/home@2x.png 2x,
+             /assets/img/home@3x.png 3x"
+             class="home">
+      <span>CATALOGUE DE SERVICES SI</span>
     </h1>
 		<section class="col-xs-12 col-sm-7 mrg-pd-0">
       <div class="action">
+        <section class="action-search">
         <input
-          class="action-search"
           type="text"
           placeholder="Recherche"/>
+        <img src="/assets/img/search.png"
+            srcset="/assets/img/search@2x.png 2x,
+             /assets/img/search@3x.png 3x"
+              class="search">
+        </section>
         <ul class="action-menu">
             <li>
-              <a routerLink="account" routerLinkActive="active"><img src="/assets/img/account.png"
-     srcset="/assets/img/account@2x.png 2x,
-             /assets/img/account@3x.png 3x"
+              <a routerLink="account" routerLinkActive="active"><img src="/assets/img/user.png"
+     srcset="/assets/img/user@2x.png 2x,
+             /assets/img/user@3x.png 3x"
      class="Himg"><br><span class="Hlink">Mon compte</span></a>
             </li>
             <li (drop)="stores.drop($event)"
                 (dragover)="stores.allowDrop($event)"
 								(mouseleave)="open=null"
 								>
-              <img src="/assets/img/cart.png"
-                      srcset="/assets/img/cart@2x.png 2x,
-	              /assets/img/cart@3x.png 3x"
+              <img src="/assets/img/card.png"
+                      srcset="/assets/img/card@2x.png 2x,
+	              /assets/img/card@3x.png 3x"
                       class="Himg">
               <a routerLink="checkout"
                  routerLinkActive="active"
@@ -66,8 +77,9 @@
 			<ul>
 				<li *ngFor="let tab of tabList">
           <a [routerLink]="tab.link"
+             [style.color]="tab.color"
              routerLinkActive="active"
-             [style.color]="tab.color">
+             [routerLinkActiveOptions]="{ exact: true }">
             {{ tab.name }}
             <div>
               <hr [style.background]="tab.color"

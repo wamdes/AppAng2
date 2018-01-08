@@ -47,16 +47,7 @@ export class MenuComponent implements OnInit {
     return this.categories.menuList.listNv2[cat].map(title => {
       return {
         title: title,
-        image: `url("assets/img/${title.toString()
-          .toLowerCase()
-          .replace(/(é|è|ë|ê)/g, 'e')
-          .replace(/(à|ã|ä|â)/g, 'a')
-          .replace(/(î|ï)/g, 'i')
-          .replace(/(ò|ö|ô)/g, 'o')
-          .replace(/(u|ü|ù)/g, 'u')
-          .replace(/ç/g, 'c')
-          .replace(/(,|\.|\?|\!)/g, '')
-          .replace(/\s/g, '-')}@2x.png")`,
+        image: `url("assets/img/fonctions-support@2x.png")`,
         description: this.categories.categorie[cat][title][0].prerequis
       };
     });

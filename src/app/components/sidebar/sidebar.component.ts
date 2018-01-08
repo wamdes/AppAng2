@@ -17,15 +17,15 @@ export class SidebarComponent implements OnInit {
   private _quickView: QuickView;
   public listMenuFix = [
     {
-      link: 'b',
+      link: '/formulaire-demande/demande-mouvement',
       title: 'demande de mouvement DE personnel'
     },
     {
-      link: 'b',
+      link: '/formulaire-demande/demande-reclamation',
       title: 'demande de reclamation'
     },
     {
-      link: 'b',
+      link: '/formulaire-demande/demande-horscat',
       title: 'demande hors catalogue'
     }
   ];
@@ -114,7 +114,7 @@ export class SidebarComponent implements OnInit {
   }
 
 
-  get quickView(): { title: string; description: string } {
+  get quickView(): { title: string; description: string; img:string } {
     return this._quickView;
   }
 

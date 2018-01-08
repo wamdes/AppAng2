@@ -1,4 +1,5 @@
 export interface QuickView {
   title: string,
-  description: string
+  description: string,
+  img: string
 }

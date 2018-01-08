@@ -31,9 +31,24 @@
   <button class="del" (click)="store.deleteTmp()">Annuler</button>
 </li>
 <li>
-  <button class="valid" (click)="goTo('/checkout/form')">Valider</button>
+  <button class="valid" (click)="confirm()">Valider</button>
 </li>
 </ul>
 </section>
 </div>
 </div>
+<app-popin
+  [(open)]="popin"
+  [addClassGlobal]="'pop-panier'"
+  [type]="'panier'"
+>
+  <h2 class="tpl-popin-title">CONFIRMATION</h2>
+  <section class="tpl-popin-content">
+    <p>
+      CONFIRMEZ-VOUS L'ENVOI DE VOTRE DEAMANDE ?
+    </p>
+    <div class="row">
+      <button><img src="assets/img/bt-orange.png"><span class="libel">NON</span></button><button (click)="goTo('/mon-panier/form')"><img src="assets/img/bt-blue.png"><span class="libel">OUI</span></button>
+    </div>
+  </section>
+</app-popin>

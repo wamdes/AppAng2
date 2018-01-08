@@ -19,13 +19,18 @@
     </h1>
 		<section class="col-xs-12 col-sm-7 mrg-pd-0">
       <div class="action">
-        <input
-          class="action-search"
-          type="text"
-          placeholder="Recherche"/>
+        <section
+          class="action-search">
+          <input type="text"
+          placeholder="Recherche">
+					<img src="/assets/img/search.png"
+	            srcset="/assets/img/search@2x.png 2x,
+	             /assets/img/search@3x.png 3x"
+	              class="search">
+							</section>
         <ul class="action-menu">
             <li>
-              <a routerLink="account" routerLinkActive="active"><img src="/assets/img/account.png"
+              <a routerLink="mon-compte" routerLinkActive="active"><img src="/assets/img/account.png"
      srcset="/assets/img/account@2x.png 2x,
              /assets/img/account@3x.png 3x"
      class="Himg"><br><span class="Hlink">Mon compte</span></a>
@@ -38,7 +43,7 @@
                       srcset="/assets/img/cart@2x.png 2x,
 	              /assets/img/cart@3x.png 3x"
                       class="Himg">
-              <a routerLink="checkout"
+              <a routerLink="mon-panier"
                  routerLinkActive="active"
 								 (mouseover)="open='panier'">
 								 <span  class="nd-store"

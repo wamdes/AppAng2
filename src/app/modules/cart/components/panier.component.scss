@@ -36,3 +36,13 @@ button{width:249px;height:61px;color:#fff;font-weight:600;background-color:trans
 .valid{background-image:url("/assets/img/bt-blue.png");font-size:18px;text-transform:uppercase;float:right}
 .bt{border:none;padding:0}
 section>ul>li{display:inline-block;margin:20px;float:right;}
+.tpl-popin-content{
+  border:none;
+  button{
+    float:right;
+    width:165px;
+    border-radius:7px;
+    .libel{margin-top:-30px;display:block;}
+    img{width:150px;}
+  }
+}

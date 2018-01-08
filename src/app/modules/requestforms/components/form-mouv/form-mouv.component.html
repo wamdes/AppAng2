@@ -1,0 +1,271 @@
+<div class="col-sm-3 col-xs-12">
+  <app-sidebar
+    [hidden]="!this.categorie.menuList"
+    [menuList]="this.categorie.menuList"
+    [quickView]="this.quickView"
+    [typeMenu]="'catalogue'"
+  ></app-sidebar>
+</div>
+<div class="container col-sm-9 col-xs-12">
+  <div class="row">
+    <article class="col-md-12 col-xs-12">
+      <h3>A LIRE :</h3>
+      <div class="col-md-6 col-xs-12">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Integer in lacinia lectus. Suspendisse dui mauris, finibus
+          a ipsum ac, posuere tempor metus. Curabitur consectetur metus
+           ac diam lacinia tincidunt. Etiam velit ex, convallis in pharetra ac,
+            ultrices vitae nisi. Suspendisse potenti.
+             Proin gravida felis a sagittis aliquam.
+              Suspendisse nec metus eu arcu rhoncus tempor.
+      </div>
+      <div class="col-md-6 col-xs-12">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Integer in lacinia lectus. Suspendisse dui mauris, finibus
+          a ipsum ac, posuere tempor metus. Curabitur consectetur metus
+           ac diam lacinia tincidunt. Etiam velit ex, convallis in pharetra ac,
+            ultrices vitae nisi. Suspendisse potenti.
+             Proin gravida felis a sagittis aliquam.
+              Suspendisse nec metus eu arcu rhoncus tempor.
+      </div>
+    </article>
+  </div>
+  <div class="row">
+    <section class="col-md-12 col-xs-12">
+      <form name="nature_mvt">
+        <select>
+          <option value="-1" disabled>Nature du mouvement</option>
+          <option *ngFor="let mouv of natMouv" value="mouv.val" [innerHTML]="mouv.libel"></option>
+
+        </select>
+      </form>
+
+      <form name="loc_site" class="loc_site">
+        <div class="bloc">
+        <h3>2 - Site de l'utilisateur <img src="assets/img/info_req_form.png"></h3>
+        <ul>
+          <li *ngFor="let site of locSite">
+            <span class="libelle" [innerHTML]="site.val"> </span>
+            <input type="radio" value="site.val"/>
+          </li>
+        </ul>
+      </div>
+      </form>
+
+      <form name="nature_contrat" class="col-sm-12 col-xs-12">
+        <select>
+          <option value="-1" disabled>Nature du contrat</option>
+          <option *ngFor="let nat of natContrat" value="nat.val" [innerHTML]="nat.libel"></option>
+        </select>
+      </form>
+
+      <form name="situation_user" class="col-sm-12 col-xs-12">
+        <select>
+          <option value="-1" disabled>Situation de l'utilisateur</option>
+          <option *ngFor="let situ of situationUser" value="situ.val" [innerHTML]="situ.val"></option>
+        </select>
+      </form>
+
+      <form name="userform" class="userform">
+      <div class="bloc">
+        <h3>1 - identification de l'utilisateur concerne par le mouvement</h3>
+        <ul>
+          <li class="col-sm-12 col-xs-12">
+            <span class="libelle">identité</span>
+            <input type="text" name="id_user" value=""/>
+          </li>
+          <li class="col-sm-12 col-xs-12">
+            <span class="libelle">civilité </span>
+            <select name="civ_user" >
+              <option value="mr" [innerHTML]="Mr"></option>
+              <option value="mme" [innerHTML]="Mme"></option>
+            </select>
+          </li>
+          <li class="col-sm-6 col-xs-12">
+            <span class="libelle">Nom </span>
+            <input type="text" name="nom_user" value=""/>
+          </li>
+          <li class="col-sm-6 col-xs-12">
+            <span class="libelle">Prenom </span>
+            <input type="text" name="prenom_user"  value=""/>
+          </li>
+          <li class="col-sm-6 col-xs-12">
+            <span class="libelle">N de CP </span>
+            <input type="text" name="cp_user" value=""/>
+          </li>
+          <li class="col-sm-6 col-xs-12">
+            <span class="libelle"> Email</span>
+            <input type="text" name="mail_user" value=""/>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bloc">
+              <h3>2 - identification du responsable hiérarchique/Donner l'ordre</h3>
+              <ul>
+                <li class="col-sm-6 col-xs-12">
+                    <span class="libelle">Nom </span>
+                  <input type="text" name="nom_resp" value=""/>
+                </li>
+                <li class="col-sm-6 col-xs-12">
+                  <span class="libelle">Prenom </span>
+                  <input type="text" name="prenom_resp" value=""/>
+                </li>
+                <li class="col-sm-6 col-xs-12">
+                  <span class="libelle">N de CP</span>
+                  <input type="text" name="cp_resp" value=""/>
+                </li>
+                <li class="col-sm-6 col-xs-12">
+                  <span class="libelle">Email </span>
+                  <input type="text" name="mail_resp" value=""/>
+                </li>
+                <li class="col-sm-12 col-xs-12">
+                  <span class="libelle">Code RG </span>
+                  <input type="text" name="rg_resp" value=""/>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bloc">
+                    <h3>3 - identification du CSI</h3>
+                    <ul>
+                      <li class="col-sm-6 col-xs-12">
+                        <span class="libelle">Nom </span>
+                        <input type="text" name="nom_csi" value=""/>
+                      </li>
+                      <li class="col-sm-6 col-xs-12">
+                        <span class="libelle">Prenom </span>
+                        <input type="text" name="prenom_csi" value=""/>
+                      </li>
+                      <li class="col-sm-6 col-xs-12">
+                          <span class="libelle">N de CP</span>
+                        <input type="text" name="cp_csi" value=""/>
+                      </li>
+                      <li class="col-sm-6 col-xs-12">
+                        <span class="libelle">Email </span>
+                        <input type="text" name="mail_csi" value=""/>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="bloc">
+                          <h3>4 - Localisation future de l'utilisateur</h3>
+                          <ul>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="libelle">Etage </span>
+                              <ul>
+                                <li><input type="text" name="floor_1" value=""/></li>
+                                <li><input type="text" name="floor_2" value=""/></li>
+                                <li><input type="text" name="floor_3" value=""/></li>
+                              </ul>
+                            </li>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="libelle">Bureau </span>
+                              <ul>
+                                <li><input type="text" name="office_1" value=""/></li>
+                                <li><input type="text" name="office_2" value=""/></li>
+                                <li><input type="text" name="office_3" value=""/></li>
+                              </ul>
+                            </li>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="libelle">Positionnement <br>dans le bureau </span>
+                              <ul>
+                                <li><input type="text" name="inOffice_1" value=""/></li>
+                                <li><input type="text" name="inOffice_2" value=""/></li>
+                                <li><input type="text" name="inOffice_3" value=""/></li>
+                              </ul>
+                            </li>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="libelle">date d'effet du mouvement </span>
+                              <input type="date" name="date_mvt" value=""/>
+                            </li>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="para">Si l'utilisateur remplace quelqu'un merci de renseigner les éléments ci-dessous concernant la personne remplacée </span>
+                            </li>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="libelle">Société </span>
+                              <input type="text" name="societe_partant" value=""/>
+                            </li>
+                            <li class="col-sm-6 col-xs-12">
+                              <span class="libelle">Nom </span>
+                              <input type="text" name="nom_partant" value=""/>
+                            </li>
+                            <li class="col-sm-6 col-xs-12">
+                              <span class="libelle">Prenom </span>
+                              <input type="text" name="prenom_partant" value=""/>
+                            </li>
+                            <li class="col-sm-6 col-xs-12">
+                                <span class="libelle">N de CP</span>
+                              <input type="text" name="cp_partant" value=""/>
+                            </li>
+                            <li class="col-sm-12 col-xs-12">
+                              <span class="libelle">Devenier </span>
+                              <select name="devenier">
+                              </select>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="bloc">
+                                <h3>5 - Demandes logistiques</h3>
+                                <ul class="col-sm-12 col-xs-12">
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="para">Badge d'accès et copieurs : </span>
+                                  </li>
+                                </ul>
+                                <ul class="col-sm-6 col-xs-12">
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="libelle">Validation badge d'acces existant </span>
+                                    <select name="valid_badge_exist">
+                                    </select>
+                                  </li>
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="libelle">Demande de badge d'entree </span>
+                                    <select name="new_badge_entree">
+                                    </select>
+                                  </li>
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="libelle">Demande de badge d'impression </span>
+                                    <select name="new_badge_impress">
+                                    </select>
+                                  </li>
+                                </ul>
+                                <ul class="col-sm-6 col-xs-12">
+                                  <li>
+                                      <span class="libelle">Habilitations particulieres </span>
+                                    <textarea></textarea>
+                                  </li>
+                                </ul>
+                                <ul class="col-sm-12 col-xs-12">
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="para">Autres demandes logistiques </span>
+                                  </li>
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="libelle">Assistance Manutention </span>
+                                      <input type="text" name="assist_manut" value=""/>
+                                  </li>
+                                  <li class="col-sm-12 col-xs-12">
+                                    <span class="libelle">Divers(mobilier, travaux) </span>
+                                      <input type="text" name="divers" value=""/>
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="bloc">
+                                      <h3>6 - Matériel informatique</h3>
+                                      <ul class="col-sm-6 col-xs-12">
+                                        <li>
+                                          <span class="libelle">Poste informatique :  </span>
+                                          <select name="mat_info">
+                                            <option *ngFor="let req of matInfo" value="req.val" [innerHTML]="req.libel"></option>
+                                          </select>
+                                        </li>
+                                      </ul>
+                                    </div>
+
+
+      </form>
+
+    </section>
+  </div>
+  </div>

@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.quickView = {
       title: 'quickView',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat,' +
-      ' leo aliquet euismod cursus, orci nibh dictum leo, vitae sollicitudin neque mi eget odio.'
+      ' leo aliquet euismod cursus, orci nibh dictum leo, vitae sollicitudin neque mi eget odio.',
+      img:'assets/img/qv1.png'
     };
       this.paramsRouter = this.route.params.subscribe(params => {
         this.showCat = !( Object.keys(params).length > 0 );

@@ -41,8 +41,8 @@ export class StoreService {
     //this._router.navigate(['/checkout/form']);
   }
   validate() {
-    this.store = this.tmpItem;
-    this.popin = 'panier';
+  //  this.store = this.tmpItem;
+    //this.popin = 'panier';
     this._router.navigate(['/']);
   }
   deleteTmp(){

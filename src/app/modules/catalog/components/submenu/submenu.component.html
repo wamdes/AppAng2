@@ -1,11 +1,12 @@
+<div class="container">
 <ul class="bloc_categorie row">
 
-  <li *ngFor="let item of items" class="col-sm-4 col-xs-6"
+  <li *ngFor="let item of items" class="col-sm-3 col-xs-6"
       [style.backgroundImage]="item.image"
       draggable="false"
       (dragstart)="stores.drag($event, item)">
 <!-- test -->
-        <aside class="libelle row">
+        <article class="libelle">
           <h3 [innerHTML]="item.title"></h3>
           <p [innerHTML]="item.description"></p>
 
@@ -16,8 +17,19 @@
           <button class="info"
                   (click)="goTo('/details/' + item.title)"
           ><img src="/assets/img/picto-infos.png"/></button>
-        </aside>
+        </article>
     <!-- test -->
   </li>
 
 </ul>
+</div>
+<app-popin
+  [(open)]="popin"
+  [addClassGlobal]="'pop-panier'"
+  [type]="'panier'"
+>
+  <h2 class="tpl-popin-title">Vous venez d'ajouter</h2>
+  <section class="tpl-popin-content">
+    show popin ;)
+  </section>
+</app-popin>

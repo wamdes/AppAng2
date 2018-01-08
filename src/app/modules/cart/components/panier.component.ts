@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
   styleUrls: ['./panier.component.scss']
 })
 export class PanierComponent implements OnInit {
+private _popin;
+
 public requests=[
   {
     id: 1,
@@ -28,12 +30,22 @@ public requests=[
 
 ]
   constructor(public store: StoreService, private  _router: Router) { }
+  confirm(){
+    this.popin='panier';
+  }
+  get popin() {
+    return this._popin;
+  }
 
+  set popin(value) {
+    this._popin = value;
+  }
   ngOnInit() {
   }
+
   goTo(url){
   let temp_url =  document.location.pathname;
-  if(url!=="/checkout/form")
+  if(url!=="/mon-panier/form")
       this._router.navigate([temp_url+url]);
   else
   this._router.navigate([url]);

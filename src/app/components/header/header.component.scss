@@ -49,10 +49,20 @@
      &-search{
 
        display: inline-block;
-       vertical-align: middle;
+       vertical-align: top;
        border-radius: 15px;
        padding: 2px 18px;
        border: 1px solid rgba(0,0,0, 0.2);
+       height:29px;
+       background-color:#fff;
+       input{
+         width:92%;
+         border: none;
+         height:20px;
+       }
+       img{
+         height:18px;
+       }
 
      }
      &-menu{

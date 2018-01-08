@@ -10,25 +10,26 @@ const routesParams: Routes = [
     loadChildren: 'app/modules/catalog/catalog.module#CatalogModule'
   },
   {
-    path: 'request',
+    path: 'mes-demandes',
     loadChildren: 'app/modules/request/request.module#RequestModule'
   },
   {
-    path: 'account',
+    path: 'formumlaire-demande',
+    loadChildren: 'app/modules/requestforms/requestforms.module#RequestformsModule'
+  },
+  {
+    path: 'mon-compte',
     loadChildren: 'app/modules/account/account.module#AccountModule'
   },
   {
-    path: 'checkout',
+    path: 'mon-panier',
     loadChildren: 'app/modules/cart/cart.module#CartModule'
   },
   {
-    path: 'perso',
+    path: 'mes-services',
     component: PersoComponent
   },
-  {
-    path: 'favoris',
-    component: FavorisComponent
-  },
+
   /**
    * redirect (homepage)
    */

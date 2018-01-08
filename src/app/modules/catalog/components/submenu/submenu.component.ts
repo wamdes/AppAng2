@@ -31,7 +31,7 @@ export class SubmenuComponent implements OnInit {
   pushStore(value) {
     this.stores.store = value;
     this.popin = 'panier';
-    this._router.navigate(['/']);
+  //  this._router.navigate(['/']);
     return this.stores.find(value.id);
 
   }

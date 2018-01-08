@@ -1,3 +1,78 @@
-<p>
-  perso works!
-</p>
+
+
+  <div class="col-sm-3">
+
+  	<app-sidebar
+      [hidden]="!this.categorie.menuList"
+  		[menuList]="this.categorie.menuList"
+  		[quickView]="this.quickView"
+      [typeMenu]="'catalogue'"
+    ></app-sidebar>
+
+  </div>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-9 col-sm-9">
+<app-filariane></app-filariane>
+
+    <section class="row">
+      <div class="demandes col-md-12 col-xs-12">
+        <div class="row">
+  	       <h3>MES SERVICES <span class="purple">METIERS</span></h3>
+         </div>
+         <div class="row">
+  	        <table class="col-md-12 col-xs-12">
+              <thead>
+                <tr>
+                  <th>Services Metiers</th>
+                  <th>actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let service of services_metiers">
+                  <td [innerHTML]="service"></td>
+                  <td><img src="assets/img/modif.png"
+     srcset="assets/img/modif@2x.png 2x,
+             assets/img/modif@3x.png 3x"
+     class="Group"><img src="assets/img/picto-trash.png"
+srcset="assets/img/picto-trash@2x.png 2x,
+assets/img/picto-trash@3x.png 3x"
+class="Group"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="demandes col-md-12 col-xs-12">
+          <div class="row">
+    	       <h3>MES SERVICES <span class="purple">BUREAUTIQUES</span></h3>
+           </div>
+           <div class="row">
+    	        <table class="col-md-12 col-xs-12">
+                <thead>
+                  <tr>
+                    <th>Services Bureautiques</th>
+                    <th>actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let service of services_bureautiques">
+                    <td [innerHTML]="service"></td>
+                    <td><img src="assets/img/modif.png"
+       srcset="assets/img/modif@2x.png 2x,
+               assets/img/modif@3x.png 3x"
+       class="Group"><img src="assets/img/picto-trash.png"
+  srcset="assets/img/picto-trash@2x.png 2x,
+  assets/img/picto-trash@3x.png 3x"
+  class="Group"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>

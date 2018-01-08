@@ -1,40 +1,66 @@
 <header xmlns="http://www.w3.org/1999/html">
 
   <!-- logo -->
-	<figure
-          class="logo"
-          routerLink=""
-          routerLinkActive="active">
-    <img src="/assets/img/logo.png">
-  </figure>
+
 
 
 	<section class="row mrg-0">
+		<figure
+	          class="logo"
+	          routerLink=""
+	          routerLinkActive="active">
+	    <img src="/assets/img/logo.png">
+	  </figure>
     <h1 class="col-xs-12 col-sm-4 mrg-pd-0 title"
         routerLink="catSI"
         routerLinkActive="active">
-      <span class="icon"></span>
+      <span class="icon"><img src="/assets/img/home_picto.png"></span>
       CATALOGUE DE SERVICES SI
     </h1>
-		<section class="col-xs-12 col-sm-8 mrg-pd-0">
+		<section class="col-xs-12 col-sm-7 mrg-pd-0">
       <div class="action">
-        <input
-          class="action-search"
-          type="text"
-          placeholder="Recherche"/>
+        <section
+          class="action-search">
+          <input type="text"
+          placeholder="Recherche">
+					<img src="/assets/img/search.png"
+	            srcset="/assets/img/search@2x.png 2x,
+	             /assets/img/search@3x.png 3x"
+	              class="search">
+							</section>
         <ul class="action-menu">
             <li>
-              <a routerLink="account" routerLinkActive="active"><img src="/assets/img/account.png"
+              <a routerLink="mon-compte" routerLinkActive="active"><img src="/assets/img/account.png"
      srcset="/assets/img/account@2x.png 2x,
              /assets/img/account@3x.png 3x"
-     class="Group"></a>
+     class="Himg"><br><span class="Hlink">Mon compte</span></a>
             </li>
-            <li ondrop="stores.drop(event)" ondragover="stores.allowDrop(event)">
-              <a routerLink="panier" routerLinkActive="active"><img src="/assets/img/cart.png"
-     srcset="/assets/img/cart@2x.png 2x,
-             /assets/img/cart@3x.png 3x"
-     class="Group"><span  class="nd-store" [innerHTML]="stores.nbStore()"></span></a>
-            </li>
+            <li (drop)="stores.drop($event)"
+                (dragover)="stores.allowDrop($event)"
+								(mouseleave)="open=null"
+								>
+              <img src="/assets/img/cart.png"
+                      srcset="/assets/img/cart@2x.png 2x,
+	              /assets/img/cart@3x.png 3x"
+                      class="Himg">
+              <a routerLink="mon-panier"
+                 routerLinkActive="active"
+								 (mouseover)="open='panier'">
+								 <span  class="nd-store"
+								 			 [innerHTML]="stores.nbStore()"
+								 ></span>
+								 <br>
+                <span class="Hlink">Mon panier</span>
+              </a><app-tooltip [(open)]="open"
+                           [type]="'panier'"
+                           [addClassGlobal]="'tp-panier'"
+              >
+                <h2 class="tpl-tooltip-title">panier</h2>
+                <section class="tpl-tooltip-content">
+                  <app-cart ></app-cart>
+                </section>
+
+              </app-tooltip>            </li>
          </ul>
        </div>
     </section>

@@ -1,0 +1,78 @@
+.container{
+  .row{
+    article{
+      margin-bottom:20px;
+      h3{
+        padding-left:5px;
+        padding-right:5px;
+        color:#9e005d;
+
+      }
+    }
+    section{
+      form{
+        img{width:20px;margin-top:-6px;}
+        .bloc{
+          float:left;
+          width:100%;margin-top:20px;
+          h3{
+            padding-left:5px;
+            padding-right:5px;
+            background-color:#9e005d;
+            color:#fff;
+            margin-top:0;
+          }
+          border:1px solid #f0f0f0;
+          ul{
+            float:left;
+            li{
+              float:left;
+              margin:0 0 10px 0;
+              .para{color:#9e005d;width:100%;clear:both;}
+              .libelle{
+                float:left;
+                margin-right:20px;
+                font-weight:600;
+              }
+              input, textarea{
+                float:left;
+                background-color:#ddd;
+              }
+              select{
+                float:left;
+                background-color:#ddd;
+                margin-bottom:10px;
+                width:auto;
+                option{
+                  text-transform: uppercase;
+                  &:hover{
+                    background-color:#aaa;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      button{
+        width:249px;height:61px;color:#fff;font-weight:600;background-color:transparent;border:none;
+        float:right;
+        border-radius:7px;
+        .libel{margin-top:-30px;display:block;}
+        img{width:150px;}
+      }
+    }
+  }
+  select{
+    float:left;
+    background-color:#ddd;
+    margin-bottom:10px;
+    width:100%;
+    option{
+      text-transform: uppercase;
+      &:hover{
+        background-color:#aaa;
+      }
+    }
+  }
+}

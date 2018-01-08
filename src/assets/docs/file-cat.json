@@ -1,0 +1,274 @@
+{
+  categories : [
+  {
+    Nom : "Services Ferroviare",
+    Description : "lorem ipsum",
+    Img : "ferroviaire.png",
+    SsCategories : [
+      {
+        Nom:"Capacités",
+        Description: "ipsum lorem",
+        Img : "capacite.png"
+      },
+      {
+        Nom:"MAINTENANCE ET INGÉNIERIE",
+        Description: "ipsum lorem",
+        Img : "maintenance.png"
+      },
+      {
+        Nom:"Circulation",
+        Description: "Sit dolor",
+        Img : "maintenance.png"
+      },
+      {
+        Nom:"Infrastructure",
+        Description: "dolor Sit ",
+        Img : "infra.png"
+      }
+    ]
+
+  },
+  {
+    Nom : "Abonnements",
+    Description : "lorem ipsum",
+    Img : "ferroviaire.png",
+    SsCategories : [
+      {
+        Nom:"audio et visioconférence",
+        Description: "ipsum lorem",
+        Img : "capacite.png"
+      },
+      {
+        Nom:"accessoires téléphonie",
+        Description: "ipsum lorem",
+        Img : "maintenance.png"
+      },
+      {
+        Nom:"téléphone portable",
+        Description: "Sit dolor",
+        Img : "maintenance.png"
+      },
+      {
+        Nom:"téléphone fixe",
+        Description: "dolor Sit ",
+        Img : "infra.png"
+      }
+    ]
+  },
+  {
+    Nom : "Equipements informatiques",
+    Description : "lorem ipsum",
+    Img : "equip_info.png",
+    SsCategories : [
+      {
+        Nom:"mobilité",
+        Description: "ipsum lorem",
+        Img : "mobilite.png"
+      },
+      {
+        Nom:"Ecrans",
+        Description: "ipsum lorem",
+        Img : "ecrans.png"
+      },
+      {
+        Nom:"Accessoires et périphériques informatiques",
+        Description: "Sit dolor",
+        Img : "periph.png"
+      },
+      {
+        Nom:"imprimantes",
+        Description: "dolor Sit ",
+        Img : "imprimantes.png"
+      },
+      {
+        Nom:"tablettes",
+        Description: "ipsum lorem",
+        Img : "tablettes.png"
+      },
+      {
+        Nom:"poste de travail fixe",
+        Description: "Sit dolor",
+        Img : "post_fix.png"
+      },
+      {
+        Nom:"poste de travail portable",
+        Description: "dolor Sit ",
+        Img : "portab.png"
+      }
+    ]
+
+  },
+  {
+    Nom : "Services Bureautiques",
+    Description : "lorem ipsum",
+    Img : "bureautique.png",
+    SsCategories : [
+      {
+        Nom:"Numérisation et reconnaissance de texte",
+        Description: "ipsum lorem",
+        Img : "numerisation.png"
+      },
+      {
+        Nom:"Gestion de bases de données",
+        Description: "ipsum lorem",
+        Img : "bdd.png"
+      },
+      {
+        Nom:"Suite Adobe",
+        Description: "ipsum lorem",
+        Img : "adobe.png"
+      },
+      {
+        Nom:"Modélisation",
+        Description: "ipsum lorem",
+        Img : "bdd.png"
+      },
+      {
+        Nom:"Suite Microsoft Office",
+        Description: "ipsum lorem",
+        Img : "office.png"
+      },
+      {
+        Nom:"Traduction et dictée vocale",
+        Description: "ipsum lorem",
+        Img : "trad.png"
+      },
+      {
+        Nom:"sécurité, partage et collaboration",
+        Description: "ipsum lorem",
+        Img : "secu.png"
+      },
+      {
+        Nom:"création graphique",
+        Description: "ipsum lorem",
+        Img : "crea.png"
+      },
+      {
+        Nom:"Messagerie",
+        Description: "ipsum lorem",
+        Img : "message.png"
+      },
+      {
+        Nom:"accessibilité",
+        Description: "ipsum lorem",
+        Img : "acces.png"
+      }
+    ]
+  },
+  {
+    Nom : "Fonctions Support",
+    Description : "lorem ipsum",
+    Img : "support.png",
+    SsCategories : [
+      {
+        Nom:"DÉCISIONNEL, REPORTING ET STATISTIQUES",
+        Description: "ipsum lorem",
+        Img : "decisionnel.png"
+      },
+      {
+        Nom:"MAINTENANCE ET INGÉNIERIE",
+        Description: "ipsum lorem",
+        Img : "maintenance.png"
+      },
+      {
+        Nom:"RESSOURCES HUMAINES",
+        Description: "Sit dolor",
+        Img : "rh.png"
+      },
+      {
+        Nom:"PROGRAMMATION",
+        Description: "dolor Sit ",
+        Img : "prog.png"
+      },
+      {
+        Nom:"ACHATS ET MARCHÉS",
+        Description: "dolor Sit ",
+        Img : "achats.png"
+      },
+      {
+        Nom:"SIG ET CARTOGRAPHIE",
+        Description: "dolor Sit ",
+        Img : "sig.png"
+      },
+      {
+        Nom:"RÉFÉRENTIEL INFRASTRUCTURE",
+        Description: "dolor Sit ",
+        Img : "ref.png"
+      },
+      {
+        Nom:"SYSTÈME D'INFORMATION",
+        Description: "ipsum lorem",
+        Img : "SI.png"
+      },
+      {
+        Nom:"CONTRÔLE DE GESTION",
+        Description: "ipsum lorem",
+        Img : "controle.png"
+      },
+      {
+        Nom:"GED",
+        Description: "Sit dolor",
+        Img : "ged.png"
+      },
+      {
+        Nom:"Digital",
+        Description: "dolor Sit ",
+        Img : "digit.png"
+      },
+      {
+        Nom:"logistique, stock, transport",
+        Description: "dolor Sit ",
+        Img : "logistique.png"
+      },
+      {
+        Nom:"partage et collaboration",
+        Description: "dolor Sit ",
+        Img : "partage.png"
+      },
+      {
+        Nom:"industrie, previsions, reporting",
+        Description: "dolor Sit ",
+        Img : "industrie.png"
+      },
+      {
+        Nom:"Salles de marchés",
+        Description: "ipsum lorem",
+        Img : "marches.png"
+      },
+      {
+        Nom:"Facturation",
+        Description: "Sit dolor",
+        Img : "facturation.png"
+      },
+      {
+        Nom:"Transverses",
+        Description: "dolor Sit ",
+        Img : "transverses.png"
+      },
+      {
+        Nom:"Investissements",
+        Description: "dolor Sit ",
+        Img : "investissement.png"
+      },
+      {
+        Nom:"comptabilité",
+        Description: "dolor Sit ",
+        Img : "comptabilite.png"
+      },
+      {
+        Nom:"budget",
+        Description: "dolor Sit ",
+        Img : "budget.png"
+      },
+      {
+        Nom:"foncier et immobilier",
+        Description: "dolor Sit ",
+        Img : "foncier.png"
+      }
+    ]
+
+  }
+
+  ]
+
+}

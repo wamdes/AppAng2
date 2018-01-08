@@ -1,23 +1,10 @@
-<figure class="bloc_categorie col-md-3 col-xs-6"
+
+
+<figure class="col-sm-3 col-xs-6"
         [style.backgroundImage]="model.image"
-        onclick="model.show = !(model.show)">
+        (click)="goTo(model.title)">
   <aside class="libelle">
     <h3 [innerHTML]="model.title"></h3>
     <p [innerHTML]="model.description"></p>
   </aside>
 </figure>
-
-<section *ngIf="model.show">
-  <ul class="row">
-    <li *ngFor="let item of model.items" class="bloc_categorie col-md-3 col-xs-6" [style.backgroundImage]="item.image">
-      <div class="close" onclick="model.show = !(model.show)">
-        <aside class="libelle" draggable="true" ondragstart="stores.drag(event, item)">
-          <h3 [innerHTML]="item.title"></h3>
-          <p [innerHTML]="item.description"></p>
-          <button class="add" onclick="pushStore(item)">add panier</button>
-        </aside>
-      </div>
-    </li>
-  </ul>
-
-</section>

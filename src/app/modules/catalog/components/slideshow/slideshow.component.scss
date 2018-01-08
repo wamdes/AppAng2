@@ -1,0 +1,83 @@
+.slideshow{
+  &-title{
+    width: 347px;
+    height: 63px;
+    white-space: nowrap;
+    font-family: Avenir;
+    font-size: 37.5px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #a1006b;
+    span {
+      font-weight: normal;
+      color: #000000;
+    }
+  }
+
+  &-desc{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 343px;
+    /*height: 99px;*/
+    font-family: Avenir-Book;
+    font-size: 33.3px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+
+}
+
+figure {
+  overflow: hidden;
+  float:left;
+  height: 315px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  background: gray;
+}
+aside{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  margin-top: 20px;
+  padding: 15px 20px;
+  width: 436px;//476px;
+  height: 315px;//497px;
+  background: rgba(255, 255, 255, 0.7);
+
+  nav{
+    position: relative;
+    clear:both;
+    bottom: 0;
+    font-size: 18px;
+
+    ul{
+      padding: 0;
+      li{
+        display: inline-block;
+        margin-right: 10px;
+        width: 76px;
+        color: rgb(158, 0, 93);
+        font-weight: 600;
+        font-size: 34px;
+        font-family: "Avenir-Lighter";
+      }
+    }
+  }
+}
+.active{
+  text-decoration: underline!important;
+}

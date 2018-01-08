@@ -5,37 +5,35 @@ import { CommonModule } from '@angular/common';
  * ROUTES
  */
 import { ROUTES_CATALOG} from './catalog.routes';
+/**
+ * shared dependencies
+ */
+import {SharedModule} from "../shared/shared.module";
 
 /**
  * Components
  */
 import { HomeComponent } from './components/home/home.component';
-import { FerroviaireComponent } from './components/ferroviaire/ferroviaire.component';
-import { BureautiqueComponent } from './components/bureautique/bureautique.component';
-import { SupportComponent } from './components/support/support.component';
-import { CatalogueComponent } from './components/catalogue/catalogue.component';
-import { Bloctheme1Component } from './commons/bloctheme1/bloctheme1.component';
-import { EquipementComponent } from './components/equipement/equipement.component';
-import { TelephonieComponent } from './components/telephonie/telephonie.component';
-import { Bloctheme2Component } from './commons/bloctheme2/bloctheme2.component';
+import {MenuComponent} from './components/menu/menu.component';
+import { SubmenuComponent } from './components/submenu/submenu.component';
+import { DetailsComponent } from './components/details/details.component';
+import { CatshowComponent } from './components/catshow/catshow.component';
+import { SlideshowComponent } from './components/slideshow/slideshow.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    ROUTES_CATALOG
+    ROUTES_CATALOG,
+    SharedModule
   ],
   declarations: [
     HomeComponent,
-    FerroviaireComponent,
-    BureautiqueComponent,
-    SupportComponent,
-    CatalogueComponent,
-    Bloctheme1Component,
-    Bloctheme2Component,
-    EquipementComponent,
-    TelephonieComponent
-	
+    MenuComponent,
+    SubmenuComponent,
+    DetailsComponent,
+    CatshowComponent,
+    SlideshowComponent
   ]
 
 })

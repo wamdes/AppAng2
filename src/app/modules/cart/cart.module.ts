@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {ROUTES_CART } from './cart.routes';
 import {PanierComponent} from './components/panier.component';
 import {SharedModule} from '../shared/shared.module';
+import { FormComponent } from './components/form/form.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 @NgModule({
   imports: [
@@ -11,7 +13,9 @@ import {SharedModule} from '../shared/shared.module';
     SharedModule
   ],
   declarations: [
-    PanierComponent
+    PanierComponent,
+    FormComponent,
+    ConfirmComponent
   ],
   providers: []
 })

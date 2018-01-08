@@ -1,0 +1,21 @@
+<section>
+  <div class="slideshow">
+    <figure >
+      <img [src]="diapos.contents[count].img">
+      <aside>
+        <h2 class="slideshow-title">
+          <span [innerHTML]="diapos.contents[count].title"></span>
+         <br>{{diapos.contents[count].subtitle}}
+        </h2>
+        <p class="slideshow-desc" [innerHTML]="diapos.contents[count].desc"></p>
+        <nav>
+          <ul>
+            <li *ngFor="let num of diapos.num"
+                [class.active]="count === num"
+                [innerHTML]="num"></li>
+          </ul>
+        </nav>
+      </aside>
+    </figure>
+  </div>
+</section>

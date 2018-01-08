@@ -1,0 +1,55 @@
+$class-mrg: mrg-px !default;
+$base-mrg: 5 !default;
+
+@for $i from 0 through 8{
+  .#{$class-mrg}{
+    &-#{$i} {
+      margin: #{( $i * $base-mrg )}px;
+      &-xs {
+        @media (max-width: $screen-xs-max)  {
+          margin: #{( $i * $base-mrg )}px !important;
+        }
+      }
+    }
+    &-l {
+      &-#{$i} {
+        margin-left: #{( $i * $base-mrg )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            margin-left: #{( $i * $base-mrg )}px !important;
+          }
+        }
+      }
+    }
+    &-r {
+      &-#{$i} {
+        margin-right: #{( $i * $base-mrg )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            margin-right: #{( $i * $base-mrg )}px !important;
+          }
+        }
+      }
+    }
+    &-t {
+      &-#{$i} {
+        margin-top: #{( $i * $base-mrg )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            margin-top: #{( $i * $base-mrg )}px !important;
+          }
+        }
+      }
+    }
+    &-b {
+      &-#{$i} {
+        margin-bottom: #{( $i * $base-mrg )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            margin-bottom: #{( $i * $base-mrg )}px !important;
+          }
+        }
+      }
+    }
+  }
+}

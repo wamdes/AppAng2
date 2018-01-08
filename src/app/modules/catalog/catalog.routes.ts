@@ -5,11 +5,9 @@ import {Routes, RouterModule} from '@angular/router';
  * components
  */
 import {HomeComponent} from './components/home/home.component';
-import {FerroviaireComponent} from './components/ferroviaire/ferroviaire.component';
-import {BureautiqueComponent} from './components/bureautique/bureautique.component';
-import {SupportComponent} from './components/support/support.component';
-import {EquipementComponent} from './components/equipement/equipement.component';
-import {TelephonieComponent} from './components/telephonie/telephonie.component';
+import { MenuComponent} from './components/menu/menu.component';
+import {SubmenuComponent} from "./components/submenu/submenu.component";
+import {DetailsComponent} from "./components/details/details.component";
 
 
 
@@ -23,29 +21,18 @@ const catalogRoutesParams: Routes = [
     component: HomeComponent
   },
   {
-    path: 'ferroviaire',
-    component: FerroviaireComponent
-  },
-  {
-    path: 'support',
-    component: SupportComponent
-  },
-  {
-    path: 'bureautique',
-    component: BureautiqueComponent
-  },
-  {
-    path: 'equipement',
-    component: EquipementComponent
-  },
-  {
-    path: 'telephonie',
-    component: TelephonieComponent
+    path: ':menu',
+    component: HomeComponent,
+    children: [
+      { path: '', component: MenuComponent },
+      { path: ':submenu', component: SubmenuComponent },
+      { path: ':submenu/details/:id', component: DetailsComponent },
+      
+    ]
   }
-];
+  ];
 /**
  * Injection
  * @type {ModuleWithProviders}
  */
 export const ROUTES_CATALOG: ModuleWithProviders = RouterModule.forChild(catalogRoutesParams);
-

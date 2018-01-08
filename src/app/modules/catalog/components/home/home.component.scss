@@ -1,5 +1,5 @@
 .libelle{
-	
+
 
 	}
 .title{margin-top:-35%;height:65px;
@@ -17,3 +17,38 @@ a{text-decoration:none; width: 97px;
   line-height: 1;
   text-align: center;
   }
+	.tab{
+		margin:20px auto;
+border-left:7px ;
+border-right:7px;
+border-top:10px;
+border-bottom:10px;
+border-style:solid;
+border-color:#A2006C;
+	}
+	.purple{color:#A2006C;}
+	section{
+	& > table{
+		width:100%;
+		text-align:left;
+		& > thead{
+			background-color:#A2006C;
+			& > tr{
+				& > th{color:#fff;font-weight:normal;}
+			}
+		}
+		& > tbody{
+
+			& > tr{
+				& > td{
+					font-weight:bold;
+					line-height:3em;
+					padding-left:3px;
+					padding-right:3px;
+
+				}
+			}
+		}
+	}
+}
+.even{background-color:#d8d8d8}

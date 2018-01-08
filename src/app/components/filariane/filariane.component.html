@@ -1,0 +1,9 @@
+<p class="fil-ariane" [style.color]="colorMenu()">
+  <span *ngFor="let info of currentPath"
+        (click)="goTo(info)"
+  >
+    <em [innerHTML]="info"></em>
+    <em> > </em>
+  </span>
+
+</p>

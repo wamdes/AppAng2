@@ -1,33 +1,88 @@
-<div class="demandes col-md-12 col-xs-12">
-  <div class="row">
-	  <h3>MES DEMANDES DE SERVICES SI</h3>
-  </div>
-  <div class="row">
-	  <div class="col-md-3 col-xs-3">
-		SERVICE DEMANDE
-	  </div>
-	  <div class="col-md-3 col-xs-3">
-		NATURE DU SERVICE
-	  </div>
-	  <div class="col-md-2 col-xs-2">
-		DATE
-	  </div>
-	  <div class="col-md-2 col-xs-2">
-		STATUT
-	  </div>
-  </div>
-  <div class="row">
-	  <div class="col-md-3 col-xs-3">
-		
-	  </div>
-	  <div class="col-md-3 col-xs-3">
-	  
-	  </div>
-	  <div class="col-md-2 col-xs-2">
-	  
-	  </div>
-	  <div class="col-md-2 col-xs-2">
-	  
-	  </div>
-  </div>
+<div class="col-sm-3">
+
+  <app-sidebar
+    [hidden]="!this.categorie.menuList"
+    [menuList]="this.categorie.menuList"
+    [quickView]="this.quickView"
+    [typeMenu]="'catalogue'"
+  ></app-sidebar>
+
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 col-sm-9">
+      <app-filariane></app-filariane>
+      <section class="row">
+        <div class="demandes col-md-12 col-xs-12">
+          <div class="row">
+	           <h3>MES DEMANDES DE <span class="purple">SERVICES SI</span></h3>
+           </div>
+          <div class="row">
+	           <table class="col-md-12 col-xs-12">
+               <thead>
+                 <tr>
+                  <th>n° de demande</th>
+                  <th>nom du service</th>
+                  <th>demandeur</th>
+                  <th>bénéficiaire</th>
+                  <th>action</th>
+                  <th>date de création</th>
+                  <th>date de validation</th>
+                  <th>statut</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let line of req_si">
+                  <td [innerHTML]="line.num_req"></td>
+                  <td [innerHTML]="line.service"></td>
+                  <td [innerHTML]="line.from_user"></td>
+                  <td [innerHTML]="line.to_user"></td>
+                  <td [innerHTML]="line.action"></td>
+                  <td [innerHTML]="line.crea"></td>
+                  <td [innerHTML]="line.valid"></td>
+                  <td [innerHTML]="line.statut"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <button>
+        TOUTES MES<br> DEMANDES
+      </button>
+
+      <section class="row">
+        <div class="demandes col-md-12 col-xs-12">
+          <div class="row">
+  	         <h3>MES DEMANDES DE <span class="purple">MOUVEMENT</span></h3>
+           </div>
+           <div class="row">
+    	        <table class="col-md-12 col-xs-12">
+                <thead>
+                  <tr>
+                    <th>nature du mouvement</th>
+                    <th>demandeur</th>
+                    <th>bénéficiaire</th>
+                    <th>date de validation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let line of req_mvt">
+                    <td [innerHTML]="line.nature"></td>
+                    <td [innerHTML]="line.from_user"></td>
+                    <td [innerHTML]="line.to_user"></td>
+                    <td [innerHTML]="line.valid"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <button>
+            TOUTES MES<br> DEMANDES
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

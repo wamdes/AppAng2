@@ -1,0 +1,56 @@
+$class-pd-ap: ap-only-pdx !default;
+$base-px-ap: 1 !default;
+
+@for $i from 0 through 8 {
+  .#{$class-pd-ap}{
+    &-#{$i} {
+      padding: #{( $i *  $base-px-ap )}px;
+      &-xs {
+        @media (max-width: $screen-xs-max)  {
+          padding: #{( $i * $base-px-ap )}px !important;
+        }
+      }
+    }
+    &-l {
+      &-#{$i} {
+        padding-left: #{( $i * $base-px-ap )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-left: #{( $i * $base-px-ap )}px !important;
+          }
+        }
+      }
+    }
+    &-r {
+      &-#{$i} {
+        padding-right: #{( $i * $base-px-ap )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-right: #{( $i * $base-px-ap )}px !important;
+          }
+        }
+      }
+    }
+    &-t {
+      &-#{$i} {
+        padding-top: #{( $i * $base-px-ap )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-top: #{( $i * $base-px-ap )}px !important;
+          }
+        }
+      }
+    }
+    &-b {
+      &-#{$i} {
+        padding-bottom: #{( $i * $base-px-ap )}px;
+        &-xs {
+          @media (max-width: $screen-xs-max)  {
+            padding-bottom: #{( $i * $base-px-ap )}px !important;
+          }
+        }
+      }
+    }
+
+  }
+}

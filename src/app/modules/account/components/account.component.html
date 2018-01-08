@@ -1,3 +1,80 @@
-<p>
-  account works!
-</p>
+
+<div class="container">
+  <app-filariane></app-filariane>
+  <div class="col-sm-10 col-xs-10">
+
+<section class="myaccount row">
+<h3>INFORMATIONS PERSONNELLES</h3>
+<ul class="col-sm-6 col-xs-12">
+  <li>
+    <span class="libelle"> CIVILITE : </span> <span class="val">{{UserAccount.civilite}}</span>
+  </li>
+  <li>
+    <span class="libelle"> NOM : </span> <span class="val">{{UserAccount.nom}}</span>
+  </li>
+
+  <li>
+    <span class="libelle"> EMAIL : </span> <span class="val">{{UserAccount.Email}}</span>
+  </li>
+  <li>
+    <span class="libelle"> CODE CP/IDENTIFIANT : </span> <span class="val">{{UserAccount.login}}</span>
+  </li>
+  <li>
+    <span class="libelle"> SERVICE : </span> <span class="val">{{UserAccount.service}}</span>
+  </li>
+</ul>
+<ul class="col-sm-6 col-xs-12">
+  <li>
+    <span class="libelle"> PRENOM : </span> <span class="val">{{UserAccount.Prenom}}</span>
+  </li>
+  <li>
+    <span class="libelle"> ORGANISATION : </span> <span class="val">{{UserAccount.organisation}}</span>
+  </li>
+  <li>
+    <span class="libelle"> TELEPHONE MOBILE : </span> <span class="val">{{UserAccount.telmob}}</span>
+  </li>
+</ul>
+<ul class="col-sm-12">
+  <li>
+    <span class="libelle"> ADRESSE DU SITE : </span> <span class="val">{{UserAccount.Adress}}</span>
+  </li>
+</ul>
+</section>
+
+<section class="login row">
+  <h3>IDENTIFIANTS D'ACCES</h3>
+  <ul class="col-sm-12">
+    <li>
+      <span class="libelle">IDENTIFIANT : </span> <span class="val">{{Login.login}}</span>
+    </li>
+    <li>
+      <span class="libelle">MOT DE PASSE : </span> <input type="password" value="Login.mdp" disabled="disabled">
+    </li>
+  </ul>
+</section>
+<section class="infos row">
+  <h3>INFORMATIONS COMPLEMENTAIRES</h3>
+  <ul class="col-sm-12">
+    <li>
+      <span class="libelle">ROLE : </span> <span class="val">{{InfoComp.role}}</span>
+    </li>
+    <li>
+      <span class="libelle">CORRESPONDANT INFORMATIQUE : </span> <span class="val">{{InfoComp.corres}}</span>
+    </li>
+    <li>
+      <span class="libelle">MON RESPONSABLE HIERARCHIQUE/DONNEUR D'ORDRE : </span> <span class="val">{{InfoComp.resp}}</span>
+    </li>
+  </ul>
+</section>
+</div>
+<div class="col-sm-2 col-xs-12">
+<figure>
+<span class="row">
+<img src="{{UserAccount.photo}}"/>
+</span>
+<span class="row">
+<button type="button">Parcourir</button>
+</span>
+</figure>
+</div>
+</div>

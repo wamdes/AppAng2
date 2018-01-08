@@ -1,0 +1,29 @@
+<section [class]="addClassGlobal ? 'overlay cursor-pointer ' + addClassGlobal : 'overlay cursor-pointer'"
+         *ngIf="_controlOpen === type"
+         (click)="close()"
+></section>
+
+<section [class]="addClassGlobal ? 'popin ' + addClassGlobal : 'popin'"
+         [hidden]="_controlOpen !== type">
+
+  <div [class]="addClass?'popin-center pd-px-3 ' + addClass : 'popin-center pd-px-3'"
+       [hidden]="_controlOpen !== type" >
+
+    <header>
+      <p class="popin-title col-xs-10">
+        <ng-content select=".tpl-popin-title"></ng-content>
+      </p>
+      <div [hidden]="!iconClose"
+            (click)="close()"
+           class="col-xs-2 cursor-pointer">
+        <img class="d-inline-block" src="{{'/assets/img/close.png'}}">
+      </div>
+    </header>
+
+    <section class="popin-contener">
+      <ng-content select=".tpl-popin-content"></ng-content>
+    </section>
+
+  </div>
+
+</section>

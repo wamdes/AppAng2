@@ -1,68 +1,57 @@
 <section>
-
-	<article class="col-sm-7 col-xs-12">
+	<article class="col-sm-12 col-xs-12">
 
 		<div class="row">
-			<app-bloctheme1></app-bloctheme1>
-			
-		</div>
-		<div class="row">
-			<div class="bloc_categorie col-md-3 col-xs-6">
-				<span class="libelle">
-					<a routerLink="ferroviaire" routerLinkActive="active"><img src="/assets/img/ferroviaire.png"
-					srcset="/assets/img/ferroviaire@2x.png 2x,
-							/assets/img/ferroviaire@3x.png 3x"
-				class="Clip-Group"><span class="title">FERROVIAIRE</span></a>
-				</span>
-			</div>
-			<div class="bloc_categorie col-md-3 col-xs-6">
-				<span class="libelle">
-					<a routerLink="support" routerLinkActive="active"><img src="/assets/img/support.png"
-					srcset="/assets/img/support@2x.png 2x,
-							/assets/img/support@3x.png 3x"
-					class="Clip-Group"><span class="title">FONCTIONS<br/>SUPPORT</span></a>
-				</span>
-			</div>
-			<div class="bloc_categorie col-md-3 col-xs-6">
-				<span class="libelle">
-					<a routerLink="bureautique" routerLinkActive="active"><img src="/assets/img/bureautique.png"
-					srcset="/assets/img/bureautique@2x.png 2x,
-							/assets/img/bureautique@3x.png 3x"
-				class="Clip-Group"><span class="title">BUREAUTIQUE</span></a>
-				</span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="bloc_categorie col-md-3 col-xs-6">
-				<span class="libelle">
-					<a routerLink="equipement" routerLinkActive="active"><img src="/assets/img/equip_info.png"
-											srcset="/assets/img/equip_info@2x.png 2x,
-													/assets/img/equip_info@3x.png 3x"
-				class="Clip-Group"><span class="title">EQUIPEMENT<br/>INFORMATIQUE</span></a>
-				</span>
-				</div>
-			<div class="bloc_categorie col-md-3 col-xs-6">
-					<span class="libelle">
-						<a routerLink="telephonie" routerLinkActive="active"><img src="/assets/img/telephonie.png"
-					srcset="/assets/img/telephonie@2x.png 2x,
-							/assets/img/telephonie@3x.png 3x"
-					class="Clip-Group"><span class="title">TELEPHONIE</span></a>
-					</span>
-			</div>
-			<div class="bloc_categorie col-md-3 col-xs-6">
-				<span class="libelle">
-					<a routerLink="securite" routerLinkActive="active"><img src="/assets/img/securite.png"
-											srcset="/assets/img/securite@2x.png 2x,
-													/assets/img/securite@3x.png 3x"
-				class="Clip-Group"><span class="title">SECURITE</span></a>
-				</span>
-			</div>
-		</div>
-		<div class="row">
-			<!--app-demandes></app-demandes-->
-		</div>
+<div class="col-sm-3">
+
+	<app-sidebar
+    [hidden]="!this.categorie.menuList"
+		[menuList]="this.categorie.menuList"
+		[quickView]="this.quickView"
+    [typeMenu]="'catalogue'"
+  ></app-sidebar>
+
+</div>
 
 
+      <div class="col-sm-9">
+        <section *ngIf="!showCat">
+          <app-filariane></app-filariane>
+          <router-outlet></router-outlet>
+        </section>
+        <section *ngIf="showCat">
+          <app-slideshow></app-slideshow>
+          <app-catshow></app-catshow>
+
+					<section class="tab col-sm-12 col-xs-12">
+					  <h2>MES DEMANDES DE <span class="purple">SERVICES SI</span></h2>
+					  <table cellspacing="0" cellpadding="0">
+					    <thead>
+					        <tr>
+					          <th>N° DE DEMANDE</th>
+					          <th>SERVICE DEMANDE</th>
+					          <th>NATURE DU SERVICE</th>
+										<th>ACTION</th>
+					          <th>DATE</th>
+										<th>STATUT</th>
+
+					        </tr>
+					      </thead>
+					      <tbody>
+					        <tr>
+					          <td>INC 9918</td>
+					          <td>Apollo</td>
+					          <td >Ferroviaire</td>
+					          <td>Modification</td>
+					          <td>01/09/2017</td>
+										<td>EN COURS</td>
+					        </tr>
+					      </tbody>
+					  </table>
+					</section>
+
+        </section>
+      </div>
+    </div>
 	</article>
-
 </section>

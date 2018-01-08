@@ -14,7 +14,7 @@ const routesParams: Routes = [
     loadChildren: 'app/modules/request/request.module#RequestModule'
   },
   {
-    path: 'formumlaire-demande',
+    path: 'formulaire-demande',
     loadChildren: 'app/modules/requestforms/requestforms.module#RequestformsModule'
   },
   {

@@ -45,6 +45,7 @@ export class FormMouvComponent implements OnInit {
   constructor(
     public categorie: CategoriesService,
     private route: ActivatedRoute,
+    private _router: Router
   ) { }
 private _showCat: undefined|boolean = false;
 
@@ -67,6 +68,19 @@ private _showCat: undefined|boolean = false;
 
   set showCat(value: boolean | undefined) {
     this._showCat = value;
+  }
+  public goTo(url) {
+    this._router.navigate([`${(/^\//.test(url) ? url : '/' + url)
+      .toString()
+      .toLowerCase()
+      .replace(/(é|è|ë|ê)/g, 'e')
+      .replace(/(à|ã|ä|â)/g, 'a')
+      .replace(/(î|ï)/g, 'i')
+      .replace(/(ò|ö|ô)/g, 'o')
+      .replace(/(u|ü|ù)/g, 'u')
+      .replace(/ç/g, 'c')
+      .replace(/(,|\.|\?|\!)/g, '')
+      .replace(/\s/g, '-')}`]);
   }
 
 }

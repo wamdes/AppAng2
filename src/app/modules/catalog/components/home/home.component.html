@@ -1,7 +1,7 @@
 <section>
-	<article class="col-sm-12 col-xs-12">
+	<article>
 
-		<div class="row">
+
 <div class="col-sm-3">
 
 	<app-sidebar
@@ -12,9 +12,9 @@
   ></app-sidebar>
 
 </div>
-
-
-      <div class="col-sm-9">
+<div class="container">
+<div class="row">
+      <div class="col-sm-12 col-xs-12">
         <section *ngIf="!showCat">
           <app-filariane></app-filariane>
           <router-outlet></router-outlet>
@@ -53,5 +53,7 @@
         </section>
       </div>
     </div>
+	</div>
+
 	</article>
 </section>

@@ -13,7 +13,7 @@ export class CatshowComponent implements OnInit {
 
   ngOnInit() {
   }
-  items(){
+  items() {
     if(this.categories.menuList && this.categories.menuList.listNiv1.length > 0){
       return this.categories.menuList.listNiv1.map(title => {
         return {

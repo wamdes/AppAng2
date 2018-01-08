@@ -1,0 +1,35 @@
+:host /deep/ app-card{
+  figure{margin:10px;width:319.98px;overflow:hidden;padding:0;
+  .libelle{width:100%}}
+  &:nth-child(0n+1) {
+    & h3{
+      color: #82be00 !important;
+    }
+  }
+  &:nth-child(0n+2) {
+    & h3{
+      color: #009aa6 !important;
+    }
+  }
+  &:nth-child(0n+3) {
+    & h3{
+      color: #9e005d !important;
+    }
+  }
+  &:nth-child(0n+4) {
+    & h3{
+      color: #E05206 !important;
+    }
+  }
+
+  &:nth-child(0n+5) {
+    & h3{
+      color: #d52128 !important;
+    }
+  }
+  &:nth-child(0n+6) {
+    & h3{
+      color: #e05206 !important;
+    }
+  }
+}

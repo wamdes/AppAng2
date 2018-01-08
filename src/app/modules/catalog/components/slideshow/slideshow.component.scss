@@ -19,10 +19,12 @@
   }
 
   &-desc{
+
     margin-top: 20px;
     margin-bottom: 0px;
     width: 343px;
     /*height: 99px;*/
+
     font-family: Avenir-Book;
     font-size: 33.3px;
     font-weight: normal;
@@ -37,9 +39,11 @@
 }
 
 figure {
+
   overflow: hidden;
   float:left;
   height: 315px;
+
   width: 100%;
   margin-top: 20px;
 }
@@ -55,12 +59,14 @@ aside{
   margin-top: 20px;
   padding: 15px 20px;
   width: 436px;//476px;
+
   height: 315px;//497px;
   background: rgba(255, 255, 255, 0.7);
 
   nav{
     position: relative;
     clear:both;
+
     bottom: 0;
     font-size: 18px;
 
